@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import BlogCard from '../../../../components/blog/BlogCard.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const authors = (await getCollection('authors')).filter(a => a.id.startsWith('en-'));
+  return authors.map(author => ({
+    params: { slug: author.id.replace(/^en-/, '') },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+const { name, role, bio, avatar, expertise, social } = author.data;
+
+const allPosts = (await getCollection('blog'))
+  .filter(p => p.data.lang === 'en' && p.data.authorSlug === author.id)
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const siteUrl = 'https://tolantongo.com.mx';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name,
+  jobTitle: role,
+  description: bio,
+  image: `${siteUrl}${avatar}`,
+  url: `${siteUrl}/en/blog/authors/${author.id.replace(/^en-/, '')}/`,
+  knowsAbout: expertise,
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Grutas de Tolantongo',
+    url: siteUrl,
+  },
+  ...(social && {
+    sameAs: [
+      social.twitter,
+      social.linkedin,
+      social.instagram,
+    ].filter(Boolean),
+  }),
+};
+
+const breadcrumbs = [
+  { label: 'Blog', href: '/en/blog/' },
+  { label: 'Authors', href: '/en/blog/' },
+  { label: name },
+];
+---
+
+<BaseLayout title={`${name} — Author at Grutas de Tolantongo`} description={bio.substring(0, 160)} canonical={`/en/blog/authors/${author.id.replace(/^en-/, '')}/`} schema={schema} breadcrumbs={breadcrumbs} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+
+  <section class="section">
+    <div class="container" style="max-width:800px">
+      <div class="author-profile animate-on-scroll">
+        <img src={avatar} alt={`Photo of ${name}`} width="120" height="120" class="author-profile__avatar" loading="eager">
+        <div class="author-profile__info">
+          <h1 class="author-profile__name">{name}</h1>
+          <p class="author-profile__role">{role}</p>
+          <p class="author-profile__bio">{bio}</p>
+          {expertise.length > 0 && (
+            <div class="author-profile__expertise">
+              <p style="font-weight:700;font-size:.85rem;color:var(--mc-blue);margin-bottom:.5rem">Areas of expertise:</p>
+              <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+                {expertise.map(skill => (
+                  <span class="chip chip--small">{skill}</span>
+                ))}
+              </div>
+            </div>
+          )}
+          {social && (
+            <div class="author-profile__social" style="margin-top:1rem;display:flex;gap:.75rem">
+              {social.instagram && (
+                <a href={social.instagram} target="_blank" rel="noopener noreferrer" style="color:var(--mc-blue-mid);font-size:.85rem">Instagram</a>
+              )}
+              {social.twitter && (
+                <a href={social.twitter} target="_blank" rel="noopener noreferrer" style="color:var(--mc-blue-mid);font-size:.85rem">Twitter</a>
+              )}
+              {social.linkedin && (
+                <a href={social.linkedin} target="_blank" rel="noopener noreferrer" style="color:var(--mc-blue-mid);font-size:.85rem">LinkedIn</a>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2>Articles by {name}</h2>
+        <p>{allPosts.length} {allPosts.length === 1 ? 'article published' : 'articles published'}</p>
+      </div>
+      {allPosts.length > 0 ? (
+        <div class="card-grid card-grid--3">
+          {allPosts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug.replace(/^en-/, '')}
+              image={post.data.image}
+              imageAlt={post.data.imageAlt}
+              author={post.data.author}
+              publishDate={post.data.publishDate}
+              readingTime={post.data.readingTime}
+              category={post.data.category}
+              lang="en"
+            />
+          ))}
+        </div>
+      ) : (
+        <p style="text-align:center;color:var(--mc-text-muted);padding:2rem 0">This author has no published articles yet.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

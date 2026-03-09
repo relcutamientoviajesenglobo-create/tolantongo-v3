@@ -1,0 +1,158 @@
+export const ui = {
+  es: {
+    // BaseLayout
+    'skip-link': 'Ir al contenido principal',
+    'whatsapp.label': '¿Necesitas ayuda?',
+    'whatsapp.aria': 'Contactar por WhatsApp',
+    'whatsapp.msg': 'Hola%2C%20quiero%20informes%20sobre%20las%20Grutas%20de%20Tolantongo',
+    'back-to-top': 'Volver arriba',
+    'breadcrumb.home': '🏠 Inicio',
+
+    // Header
+    'nav.aria': 'Navegación principal',
+    'nav.mobile.aria': 'Navegación móvil',
+    'nav.burger.open': 'Abrir menú',
+    'nav.burger.close': 'Cerrar menú',
+    'nav.cta': 'Boletos',
+    'nav.cta.mobile': '🎟️ Comprar Boletos',
+    'nav.expand': 'Expandir',
+
+    // Footer
+    'footer.cta.title': 'Planea tu aventura en Tolantongo',
+    'footer.cta.desc': 'Consulta precios, revisa cómo llegar y reserva tu hospedaje. El paraíso termal de Hidalgo te espera.',
+    'footer.cta.prices': 'Ver precios 2026',
+    'footer.cta.directions': 'Cómo llegar',
+    'footer.share': 'Comparte esta página',
+    'footer.brand.desc': 'Aguas termales naturales, grutas de roca caliza y un cañón de 800 metros en Hidalgo, México.',
+    'footer.brand.contact': 'Contacto',
+    'footer.col1.title': 'Atracciones',
+    'footer.col1.grutas': 'Las Grutas Termales',
+    'footer.col1.albercas': 'Albercas Escalonadas',
+    'footer.col1.rio': 'Río Tolantongo',
+    'footer.col1.canon': 'Cañón',
+    'footer.col1.actividades': 'Actividades',
+    'footer.col2.title': 'Planea tu visita',
+    'footer.col2.precios': 'Precios y Boletos',
+    'footer.col2.como': 'Cómo Llegar',
+    'footer.col2.hospedaje': 'Hospedaje',
+    'footer.col2.blog': 'Blog y Guías',
+    'footer.col2.contacto': 'Contacto',
+    'footer.legal': '©2026 Grutas de Tolantongo — Ejido El Alberto, Cardonal, Hidalgo',
+    'footer.privacy': 'Privacidad',
+    'footer.terms': 'Términos',
+
+    // Price banner
+    'price.open': 'Abierto',
+    'price.everyday': 'todos los días',
+    'price.adult': 'Adulto',
+    'price.child': 'Niño (4‑11)',
+    'price.free': 'Menores de 3',
+    'price.free.label': 'Gratis',
+    'price.cta': 'Ver todos los precios',
+
+    // Blog
+    'blog.related': 'Artículos relacionados',
+    'blog.reading': 'min lectura',
+    'blog.updated': 'actualizado',
+    'blog.faq.title': 'Preguntas frecuentes',
+    'blog.articles': 'artículos publicados',
+    'blog.toc': 'Contenido',
+    'blog.cta.title': '¿Listo para vivir Tolantongo?',
+    'blog.cta.desc': 'Consulta precios actualizados, revisa cómo llegar y planea tu visita al paraíso termal de Hidalgo.',
+    'blog.cta.primary': 'Ver precios 2026',
+    'blog.cta.secondary': 'Cómo llegar',
+
+    // Categories
+    'cat.guias': 'Guía de Viaje',
+    'cat.naturaleza': 'Naturaleza',
+    'cat.actividades': 'Actividades',
+    'cat.hospedaje': 'Hospedaje',
+    'cat.cultura': 'Cultura',
+    'cat.consejos': 'Consejos',
+
+    // Silos
+    'silo.grutas-termales': 'Grutas Termales',
+    'silo.actividades-aventura': 'Actividades y Aventura',
+    'silo.hospedaje-camping': 'Hospedaje y Camping',
+    'silo.guias-viaje': 'Guías de Viaje',
+    'silo.cultura-region': 'Cultura y Región',
+  },
+  en: {
+    // BaseLayout
+    'skip-link': 'Skip to main content',
+    'whatsapp.label': 'Need help?',
+    'whatsapp.aria': 'Contact via WhatsApp',
+    'whatsapp.msg': 'Hello%2C%20I%20want%20information%20about%20Grutas%20de%20Tolantongo',
+    'back-to-top': 'Back to top',
+    'breadcrumb.home': '🏠 Home',
+
+    // Header
+    'nav.aria': 'Main navigation',
+    'nav.mobile.aria': 'Mobile navigation',
+    'nav.burger.open': 'Open menu',
+    'nav.burger.close': 'Close menu',
+    'nav.cta': 'Tickets',
+    'nav.cta.mobile': '🎟️ Buy Tickets',
+    'nav.expand': 'Expand',
+
+    // Footer
+    'footer.cta.title': 'Plan your Tolantongo adventure',
+    'footer.cta.desc': 'Check prices, get directions and book your stay. The thermal paradise of Hidalgo awaits you.',
+    'footer.cta.prices': 'See 2026 prices',
+    'footer.cta.directions': 'How to get here',
+    'footer.share': 'Share this page',
+    'footer.brand.desc': 'Natural thermal springs, limestone grottoes and an 800-meter canyon in Hidalgo, Mexico.',
+    'footer.brand.contact': 'Contact',
+    'footer.col1.title': 'Attractions',
+    'footer.col1.grutas': 'Thermal Grottoes',
+    'footer.col1.albercas': 'Tiered Pools',
+    'footer.col1.rio': 'Tolantongo River',
+    'footer.col1.canon': 'Canyon',
+    'footer.col1.actividades': 'Activities',
+    'footer.col2.title': 'Plan your visit',
+    'footer.col2.precios': 'Prices & Tickets',
+    'footer.col2.como': 'How to Get Here',
+    'footer.col2.hospedaje': 'Lodging',
+    'footer.col2.blog': 'Blog & Guides',
+    'footer.col2.contacto': 'Contact',
+    'footer.legal': '©2026 Grutas de Tolantongo — Ejido El Alberto, Cardonal, Hidalgo',
+    'footer.privacy': 'Privacy',
+    'footer.terms': 'Terms',
+
+    // Price banner
+    'price.open': 'Open',
+    'price.everyday': 'every day',
+    'price.adult': 'Adult',
+    'price.child': 'Child (4‑11)',
+    'price.free': 'Under 3',
+    'price.free.label': 'Free',
+    'price.cta': 'See all prices',
+
+    // Blog
+    'blog.related': 'Related articles',
+    'blog.reading': 'min read',
+    'blog.updated': 'updated',
+    'blog.faq.title': 'Frequently asked questions',
+    'blog.articles': 'articles published',
+    'blog.toc': 'Contents',
+    'blog.cta.title': 'Ready to experience Tolantongo?',
+    'blog.cta.desc': 'Check updated prices, get directions and plan your visit to the thermal paradise of Hidalgo.',
+    'blog.cta.primary': 'See 2026 prices',
+    'blog.cta.secondary': 'How to get here',
+
+    // Categories
+    'cat.guias': 'Travel Guide',
+    'cat.naturaleza': 'Nature',
+    'cat.actividades': 'Activities',
+    'cat.hospedaje': 'Lodging',
+    'cat.cultura': 'Culture',
+    'cat.consejos': 'Tips',
+
+    // Silos
+    'silo.grutas-termales': 'Thermal Grottoes',
+    'silo.actividades-aventura': 'Adventure Activities',
+    'silo.hospedaje-camping': 'Lodging & Camping',
+    'silo.guias-viaje': 'Travel Guides',
+    'silo.cultura-region': 'Culture & Region',
+  },
+} as const;

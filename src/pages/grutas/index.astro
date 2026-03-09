@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import VideoGallery from '../../components/VideoGallery.astro';
+import { touristAttraction, faqPage } from '../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Grutas de Tolantongo — Grutas y Formaciones',
+    description: 'Explora las grutas termales de caliza, albercas escalonadas, río termal y cañón de 800 metros en Hidalgo, México.',
+    url: 'https://tolantongo.com.mx/grutas/',
+  }),
+  faqPage([
+    { question: '¿Se puede nadar dentro de las grutas?', answer: 'Sí. Hay un canal de agua termal de 40-80 cm donde los visitantes pueden bañarse. Los 36°C constantes hacen la experiencia muy placentera incluso en invierno.' },
+    { question: '¿Se necesita equipo especial?', answer: 'No. Se recomienda zapatos acuáticos con agarre, traje de baño y toalla. Las superficies dentro de las grutas pueden ser resbaladizas.' },
+    { question: '¿Las grutas están iluminadas?', answer: 'Hay iluminación básica en las zonas principales. Se recomienda llevar una linterna pequeña para explorar partes más profundas.' },
+  ]),
+];
+---
+
+<BaseLayout title="Las Grutas Termales de Tolantongo — Cuevas de Roca Caliza a 36°C" description="Grutas de Tolantongo: cuevas naturales de roca caliza con aguas a 36°C, albercas escalonadas, río termal de 1.5 km y cañón de 800 m en Hidalgo, México." canonical="/grutas/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Grutas y Albercas</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Naturaleza termal · Hidalgo</span>
+        <h1 class="hero__title">Las Grutas Termales de Tolantongo</h1>
+        <p class="hero__desc">Cuevas naturales de roca caliza formadas por aguas termales que emergen a 36°C desde el interior de la montaña, en el Cañón de Tolantongo.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/como-llegar/" class="btn btn--outline btn--lg">Cómo llegar</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>36°C</strong><span>Temperatura constante</span></div><div class="stat"><strong>1.5 km</strong><span>Río termal</span></div><div class="stat"><strong>6</strong><span>Albercas escalonadas</span></div><div class="stat"><strong>800 m</strong><span>Cañón</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cueva-termal-visitantes.webp" alt="Interior de las grutas termales de Tolantongo con agua a 36°C" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+    </svg>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="two-col animate-on-scroll" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+        <div>
+          <h2 style="margin-bottom:1.25rem">¿Qué hace únicas a las Grutas de Tolantongo?</h2>
+          <p style="margin-bottom:1rem">Las Grutas de Tolantongo son un sistema de cuevas naturales formadas en roca caliza por la acción de aguas termales que emergen a 36°C desde el interior de la montaña. Se ubican dentro del Cañón de Tolantongo, municipio de Cardonal, Hidalgo, administradas por la comunidad indígena Ñähñu del Ejido El Alberto.</p>
+          <p style="margin-bottom:1rem">A diferencia de los balnearios convencionales, las grutas son una formación natural sin intervención artificial. El agua termal emerge desde fracturas en la roca caliza a través de un proceso geotérmico que mantiene la temperatura en 36°C constantes todo el año.</p>
+          <p>El interior presenta formaciones de travertino, techos de hasta 15 metros y un sonido continuo de flujo de agua que define la experiencia sensorial del lugar.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🌡️ Temperatura geotérmica</p><p style="font-size:.9rem;color:#4A5568;margin:0">36°C constantes todo el año desde manantiales profundos, sin calentamiento artificial.</p></div>
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🪨 Travertino natural</p><p style="font-size:.9rem;color:#4A5568;margin:0">Paredes y albercas de roca caliza moldeada por el agua termal durante siglos.</p></div>
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">👨‍👩‍👧 Comunidad Ñähñu</p><p style="font-size:.9rem;color:#4A5568;margin:0">Gestionado por el Ejido El Alberto con cupo limitado para preservar el ecosistema.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray" aria-labelledby="pc-title">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2 id="pc-title">Explora todas las atracciones del destino</h2>
+        <p>Dentro del Cañón de Tolantongo encontrarás cuatro zonas principales, cada una con características únicas.</p>
+      </div>
+      <div class="card-grid card-grid--4 animate-on-scroll delay-1"><a href="/grutas/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-cueva-termal-interior-rio.webp" alt="Las grutas termales" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Más visitado</span>
+            <p class="photo-card__title">Las Grutas Termales</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">Túneles de roca caliza con agua a 36°C.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a><a href="/grutas/albercas-escalonadas/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-pozas-termales-escaleras-naturales.webp" alt="Albercas escalonadas termales" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Icónico</span>
+            <p class="photo-card__title">Albercas Escalonadas</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">Seis albercas en cascada excavadas en la roca.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a><a href="/grutas/rio/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-rio-turquesa-balneario-natural.webp" alt="Río termal de Tolantongo" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Único en México</span>
+            <p class="photo-card__title">Río Tolantongo</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">1.5 km de río termal dentro del cañón.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a><a href="/grutas/canon/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-canon-verde-panoramica.webp" alt="Cañón de Tolantongo" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Espectacular</span>
+            <p class="photo-card__title">Cañón de Tolantongo</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">800 metros de paredes verticales.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a></div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header animate-on-scroll" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Planea tu visita a las grutas</h2></div>
+      <div class="service-cards animate-on-scroll delay-1"><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Precios 2026</p><p class="service-card__desc">Tarifas de entrada, cabañas y campamento.</p><a href="/precios/" class="btn">Ver tarifas</a></div><div class="service-card"><div style="font-size:2.5rem">🚗</div><p class="service-card__title">Cómo llegar</p><p class="service-card__desc">Rutas desde CDMX, Pachuca y Querétaro.</p><a href="/como-llegar/" class="btn">Ver rutas</a></div><div class="service-card"><div style="font-size:2.5rem">🏕️</div><p class="service-card__title">Hospedaje</p><p class="service-card__desc">Cabañas y campamento dentro del cañón.</p><a href="/hospedaje/" class="service-card__cta">Ver opciones →</a></div><div class="service-card"><div style="font-size:2.5rem">📋</div><p class="service-card__title">Qué llevar</p><p class="service-card__desc">Lista completa para tu visita.</p><a href="/blog/que-llevar-a-tolantongo/" class="service-card__cta">Ver lista →</a></div></div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['albercas-drone','cascada-minerales-musgo','cascada-monumental','cascada-termal-minerales','gruta-cascada-gigante']} lang="es" title="Videos de las grutas" columns={3} />
+
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería del destino</h2>
+        <p>Imágenes de las formaciones naturales y aguas termales</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-cueva-termal-formaciones-minerales.webp" alt="Formaciones minerales dentro de la cueva termal" width="800" height="400" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-canon-verde-panoramica.webp" alt="Vista panorámica del cañón verde de Tolantongo" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-balneario-natural.webp" alt="Río turquesa en el balneario natural" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-escaleras-naturales.webp" alt="Escaleras naturales entre las pozas termales" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header animate-on-scroll"><h2 id="faq-t">Preguntas sobre las grutas</h2></div>
+      <div class="faq-list animate-on-scroll delay-1"><details><summary>¿Se puede nadar dentro de las grutas?</summary><div class="faq-answer">Sí. Hay un canal de agua termal de 40-80 cm donde los visitantes pueden bañarse. Los 36°C constantes hacen la experiencia muy placentera incluso en invierno.</div></details><details><summary>¿Se necesita equipo especial?</summary><div class="faq-answer">No. Se recomienda zapatos acuáticos con agarre, traje de baño y toalla. Las superficies dentro de las grutas pueden ser resbaladizas.</div></details><details><summary>¿Las grutas están iluminadas?</summary><div class="faq-answer">Hay iluminación básica en las zonas principales. Se recomienda llevar una linterna pequeña para explorar partes más profundas.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

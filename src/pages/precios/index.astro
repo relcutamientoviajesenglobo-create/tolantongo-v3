@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import VideoGallery from '../../components/VideoGallery.astro';
+import { touristAttraction, faqPage } from '../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Precios Grutas de Tolantongo 2026',
+    description: 'Precios de entrada, hospedaje y servicios en Grutas de Tolantongo 2026.',
+    url: 'https://tolantongo.com.mx/precios/',
+  }),
+  faqPage([
+    { question: '¿Se puede pagar con tarjeta?', answer: 'No. Solo efectivo. Retira dinero en Ixmiquilpan antes de llegar, ya que dentro del cañón no hay cajeros ni terminales.' },
+    { question: '¿Hay descuento para grupos?', answer: 'Para grupos (escuelas, empresas) se recomienda contactar directamente al destino con anticipación.' },
+    { question: '¿Los precios cambian en temporada alta?', answer: 'Sí. En Semana Santa, verano y puentes los precios pueden incrementar. Verifica siempre antes de tu visita.' },
+    { question: '¿El hospedaje incluye la entrada a las áreas termales?', answer: 'Sí. Todas las cabañas y el campamento incluyen acceso completo sin costo adicional.' },
+  ]),
+];
+---
+
+<BaseLayout title="Precios Grutas de Tolantongo 2026 — Entrada, Cabañas y Campamento" description="Precios 2026: entrada adulto $220 MXN, niño $110 MXN, cabañas desde $900 MXN, campamento $250 MXN. Tarifas oficiales Grutas de Tolantongo, Hidalgo." canonical="/precios/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Precios y Boletos 2026</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Tarifas actualizadas 2026</span>
+        <h1 class="hero__title">Precios y boletos Grutas de Tolantongo</h1>
+        <p class="hero__desc">Consulta tarifas de entrada, hospedaje y campamento. Pago únicamente en efectivo.</p>
+        <div class="hero__actions">
+          <a href="/como-llegar/" class="btn btn--primary btn--lg">Cómo llegar</a>
+          <a href="/hospedaje/" class="btn btn--outline btn--lg">Ver hospedaje</a>
+        </div>
+        
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-pozas-termales-canon-panoramico.webp" alt="Vista panorámica de las grutas termales de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="card-grid card-grid--4 animate-on-scroll" style="margin-bottom:2rem">
+        <div style="display:flex;align-items:center;gap:.75rem;padding:1rem;background:white;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)"><span style="font-size:1.5rem">🕐</span><div><p style="font-size:.7rem;font-weight:700;color:#4A5568;text-transform:uppercase">Horario</p><p style="font-weight:800;color:#1A3A6B;margin:0">6:00 – 20:00 hrs</p></div></div>
+        <div style="display:flex;align-items:center;gap:.75rem;padding:1rem;background:white;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)"><span style="font-size:1.5rem">💵</span><div><p style="font-size:.7rem;font-weight:700;color:#4A5568;text-transform:uppercase">Pago</p><p style="font-weight:800;color:#1A3A6B;margin:0">Únicamente efectivo</p></div></div>
+        <div style="display:flex;align-items:center;gap:.75rem;padding:1rem;background:white;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)"><span style="font-size:1.5rem">📅</span><div><p style="font-size:.7rem;font-weight:700;color:#4A5568;text-transform:uppercase">Apertura</p><p style="font-weight:800;color:#1A3A6B;margin:0">Todos los días</p></div></div>
+        <div style="display:flex;align-items:center;gap:.75rem;padding:1rem;background:white;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)"><span style="font-size:1.5rem">👥</span><div><p style="font-size:.7rem;font-weight:700;color:#4A5568;text-transform:uppercase">Aforo</p><p style="font-weight:800;color:#1A3A6B;margin:0">Cupo limitado diario</p></div></div>
+      </div>
+      <div style="background:#1A3A6B;border-radius:16px;padding:1.25rem 1.75rem;display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;flex-wrap:wrap">
+        <span style="font-size:1.5rem">ℹ️</span>
+        <p style="color:white;margin:0;font-size:.9rem"><strong>Importante:</strong> Precios orientativos. Pueden variar en temporada alta. Siempre confirma antes de tu visita.</p>
+      </div>
+<h3 style="margin:2rem 0 1rem;font-size:1.2rem">Acceso General</h3><div style="border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:2rem"><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#1A3A6B;color:white"><th style="padding:.9rem 1.25rem;text-align:left;font-weight:700;font-size:.85rem">Tipo de visitante</th><th style="padding:.9rem 1.25rem;text-align:center;font-weight:700;font-size:.85rem">Precio</th><th style="padding:.9rem 1.25rem;text-align:left;font-weight:700;font-size:.85rem">Detalle</th></tr></thead><tbody><tr style="background:white"><td style="padding:.9rem 1.25rem;font-weight:700;">Adulto (12+ años)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$220 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Acceso completo: grutas, albercas, río y cañón</td></tr><tr style="background:#F2F2F0"><td style="padding:.9rem 1.25rem;font-weight:700;">Niño (4–11 años)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$110 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Acceso completo. Menores de 3 años sin costo.</td></tr><tr style="background:white"><td style="padding:.9rem 1.25rem;font-weight:700;">Adulto mayor (60+)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$180 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Con identificación oficial vigente</td></tr><tr style="background:#F2F2F0"><td style="padding:.9rem 1.25rem;font-weight:700;">Estacionamiento</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$60 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Por vehículo. Vigilado 24 horas.</td></tr></tbody></table></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0">
+        <div style="border-radius:16px;overflow:hidden"><img src="/media/grutas-tolantongo-pozas-termales-vista-alta-soleada.webp" alt="Vista alta y soleada de las pozas termales escalonadas" width="600" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div style="border-radius:16px;overflow:hidden"><img src="/media/grutas-tolantongo-poza-infinita-mujer-paisaje.webp" alt="Mujer disfrutando la poza infinita con paisaje del cañón" width="600" height="450" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+<h3 style="margin:2rem 0 1rem;font-size:1.2rem">Hospedaje — Cabañas</h3><div style="border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:2rem"><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#1A3A6B;color:white"><th style="padding:.9rem 1.25rem;text-align:left;font-weight:700;font-size:.85rem">Tipo de cabaña</th><th style="padding:.9rem 1.25rem;text-align:center;font-weight:700;font-size:.85rem">Precio / noche</th><th style="padding:.9rem 1.25rem;text-align:left;font-weight:700;font-size:.85rem">Incluye</th></tr></thead><tbody><tr style="background:white"><td style="padding:.9rem 1.25rem;font-weight:700;">Básica (2 personas)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$900 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Cama matrimonial, baño, acceso termal</td></tr><tr style="background:#F2F2F0"><td style="padding:.9rem 1.25rem;font-weight:700;">Familiar (4 personas)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$1,400 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">2 camas, baño privado, vista al cañón</td></tr><tr style="background:white"><td style="padding:.9rem 1.25rem;font-weight:700;">Premium (4–6 personas)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$2,200 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Jacuzzi termal privado, sala, terraza panorámica</td></tr></tbody></table></div><div style="border-radius:16px;overflow:hidden;margin:2rem 0"><img src="/media/grutas-tolantongo-vista-aerea-hotel-pozas.webp" alt="Vista aérea del hotel con pozas escalonadas y cabañas" width="1200" height="500" loading="lazy" style="width:100%;height:280px;object-fit:cover;display:block"></div>
+<h3 style="margin:2rem 0 1rem;font-size:1.2rem">Campamento</h3><div style="border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:2rem"><table style="width:100%;border-collapse:collapse"><thead><tr style="background:#1A3A6B;color:white"><th style="padding:.9rem 1.25rem;text-align:left;font-weight:700;font-size:.85rem">Servicio</th><th style="padding:.9rem 1.25rem;text-align:center;font-weight:700;font-size:.85rem">Precio</th><th style="padding:.9rem 1.25rem;text-align:left;font-weight:700;font-size:.85rem">Detalle</th></tr></thead><tbody><tr style="background:white"><td style="padding:.9rem 1.25rem;font-weight:700;">Área de campamento (1 noche)</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$250 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Por tienda. Sanitarios y agua incluidos.</td></tr><tr style="background:#F2F2F0"><td style="padding:.9rem 1.25rem;font-weight:700;">Renta de tienda</td><td style="padding:.9rem 1.25rem;text-align:center;font-weight:900;font-size:1.1rem;color:#1A3A6B;">$350 MXN</td><td style="padding:.9rem 1.25rem;color:#4A5568;font-size:.875rem;">Para 2 personas con sleeping bag</td></tr></tbody></table></div>    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería fotográfica</h2>
+        <p>Descubre lo que te espera en las Grutas de Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-pozas-termales-superiores-vista.webp" alt="Vista de las pozas termales superiores escalonadas de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-day4.webp" alt="Pozas termales de Tolantongo en un día soleado" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-canon-verde.webp" alt="Pozas termales con vegetación verde del cañón de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-mujer-terrazas-altas.webp" alt="Mujer disfrutando las terrazas altas de las pozas termales" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-vista-lateral-canon.webp" alt="Vista lateral del cañón con las pozas termales de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-zona-comercial-servicios.webp" alt="Zona comercial y de servicios en Grutas de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-canon-pozas-panoramica-amplia.webp" alt="Vista panorámica del cañón con pozas termales y puente colgante" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-termal-visitante.webp" alt="Visitante disfrutando la cascada termal de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-vista-montanas.webp" alt="Mujer en la poza infinita con vista a las montañas" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['pozas-vista-lateral','albercas-drone','hotel-pozas-aerea']} lang="es" title="Videos del destino" columns={3} />
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header animate-on-scroll"><h2 id="faq-t">Preguntas sobre precios</h2></div>
+      <div class="faq-list animate-on-scroll delay-1"><details><summary>¿Se puede pagar con tarjeta?</summary><div class="faq-answer">No. Solo efectivo. Retira dinero en Ixmiquilpan antes de llegar, ya que dentro del cañón no hay cajeros ni terminales.</div></details><details><summary>¿Hay descuento para grupos?</summary><div class="faq-answer">Para grupos (escuelas, empresas) se recomienda contactar directamente al destino con anticipación.</div></details><details><summary>¿Los precios cambian en temporada alta?</summary><div class="faq-answer">Sí. En Semana Santa, verano y puentes los precios pueden incrementar. Verifica siempre antes de tu visita.</div></details><details><summary>¿El hospedaje incluye la entrada a las áreas termales?</summary><div class="faq-answer">Sí. Todas las cabañas y el campamento incluyen acceso completo sin costo adicional.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { webPage } from '../../i18n/schema';
+
+const schema = [
+  webPage({
+    name: 'Términos y Condiciones — Grutas de Tolantongo',
+    url: 'https://tolantongo.com.mx/terminos/',
+    description: 'Términos y condiciones de uso del sitio web de Grutas de Tolantongo.',
+  }),
+];
+---
+
+<BaseLayout title="Términos y Condiciones — Grutas de Tolantongo" description="Términos y condiciones de acceso a las Grutas de Tolantongo: reglas del destino, responsabilidad del visitante, cuidado del entorno y política de reembolsos." canonical="/terminos/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Términos y Condiciones</span></li></ol></div></div>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Documento legal</span>
+        <h1 class="hero__title">Términos y Condiciones</h1>
+        <p class="hero__desc">Condiciones de acceso y uso del destino Grutas de Tolantongo</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container" style="max-width:800px">
+      <div style="background:white;border-radius:20px;padding:2.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:1.5rem">
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">1. Acceso al destino</h2><p style="font-size:.925rem;color:#4A5568">El acceso a las Grutas de Tolantongo está sujeto al pago de la tarifa vigente en efectivo. El destino se reserva el derecho de limitar el acceso cuando se alcance el cupo máximo diario establecido por la comunidad administradora.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">2. Responsabilidad del visitante</h2><p style="font-size:.925rem;color:#4A5568">El visitante es responsable de su seguridad personal dentro del destino. El uso de las áreas termales se realiza bajo responsabilidad propia. Se recomienda no nadar solo, respetar las señalizaciones y no aventurarse fuera de las zonas habilitadas.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">3. Cuidado del entorno</h2><p style="font-size:.925rem;color:#4A5568">Está estrictamente prohibido: introducir detergentes o jabones en las aguas termales, arrojar basura en el río o cañón, realizar fogatas fuera de áreas designadas, dañar las formaciones de roca y fauna del lugar.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">4. Reembolsos y cancelaciones</h2><p style="font-size:.925rem;color:#4A5568">Las tarifas de entrada no son reembolsables. Para reservas de hospedaje, cancelaciones con más de 48 horas de anticipación pueden gestionarse directamente con la administración del destino.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">5. Jurisdicción</h2><p style="font-size:.925rem;color:#4A5568">Cualquier controversia derivada del uso del destino se someterá a la jurisdicción de los tribunales competentes del municipio de Cardonal, Hidalgo, México.</p></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

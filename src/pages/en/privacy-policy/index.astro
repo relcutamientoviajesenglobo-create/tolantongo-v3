@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { webPage } from '../../../i18n/schema';
+
+const schema = [
+  webPage({
+    name: 'Privacy Policy — Grutas de Tolantongo',
+    url: 'https://tolantongo.com.mx/en/privacy-policy/',
+    description: 'Privacy policy and data protection for Grutas de Tolantongo.',
+  }),
+];
+---
+
+<BaseLayout lang="en" title="Privacy Policy — Grutas de Tolantongo" description="Privacy policy for Grutas de Tolantongo. Personal data processing, ARCO rights and data controller. Ejido El Alberto, Cardonal, Hidalgo." canonical="/en/privacy-policy/" schema={schema}>
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Privacy Policy</span></li></ol></div></div>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Legal document</span>
+        <h1 class="hero__title">Privacy Policy</h1>
+        <p class="hero__desc">Grutas de Tolantongo — Ejido El Alberto, Cardonal, Hidalgo</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container" style="max-width:800px">
+      <div style="background:white;border-radius:20px;padding:2.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:1.5rem">
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">1. Data controller</h2><p style="font-size:.925rem;color:#4A5568">Ejido El Alberto (Grutas de Tolantongo), located at Comunidad El Alberto s/n, Cardonal, Hidalgo, C.P. 42400, Mexico, is responsible for the use and protection of your personal data.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">2. Personal data we collect</h2><p style="font-size:.925rem;color:#4A5568">For reservation and visitor service purposes we may collect: full name, phone number, email address and number of visitors. We do not collect financial data since all payments are made in cash.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">3. Purpose of data processing</h2><p style="font-size:.925rem;color:#4A5568">Your data is used to: confirm lodging reservations, provide information about the destination and send communications related to your visit. We do not sell or share your data with third parties without your consent.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">4. ARCO rights</h2><p style="font-size:.925rem;color:#4A5568">You have the right to Access, Rectify, Cancel or Oppose the processing of your personal data (ARCO Rights). To exercise them you may contact us at: <a href="mailto:info@grutasdetolantongo.mx" style="color:#1951A0;font-weight:600">info@grutasdetolantongo.mx</a></p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">5. Changes to this privacy policy</h2><p style="font-size:.925rem;color:#4A5568">Any changes to this privacy policy will be published on this website. Last updated: January 2026.</p></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

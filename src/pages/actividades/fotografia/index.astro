@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { touristAttraction, faqPage } from '../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Fotografía en Grutas de Tolantongo',
+    description: 'Los mejores spots y horarios para fotografía en Grutas de Tolantongo.',
+    url: 'https://tolantongo.com.mx/actividades/fotografia/',
+  }),
+  faqPage([
+    { question: '¿Se permiten drones en Tolantongo?', answer: 'El uso de drones puede estar sujeto a restricciones por parte del destino. Consultar directamente con la administración antes de llevar equipo de vuelo.' },
+    { question: '¿Hay restricciones para fotografía comercial?', answer: 'Para sesiones fotográficas comerciales o de producción es necesario solicitar permiso previo a la administración del destino.' },
+    { question: '¿Cuál es la mejor época del año para fotografiar Tolantongo?', answer: 'Invierno (diciembre-febrero) por la niebla termal. Primavera (marzo-mayo) para cielos despejados y vegetación verde. Evitar lluvias de verano para mayor claridad.' },
+  ]),
+];
+---
+
+<BaseLayout title="Fotografía en Grutas de Tolantongo — Spots y Mejores Horas 2026" description="Fotografía en Tolantongo: mejores spots, horas doradas, configuraciones recomendadas y consejos para fotografiar grutas termales, albercas y cañón en Hidalgo." canonical="/actividades/fotografia/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/actividades/" class="breadcrumbs__link">Actividades</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Fotografía en Grutas de Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Fotografía de naturaleza</span>
+        <h1 class="hero__title">Fotografía en Grutas de Tolantongo</h1>
+        <p class="hero__desc">Uno de los destinos fotográficos más espectaculares de México: cañón de 800 metros, río termal con niebla, albercas en cascada y grutas iluminadas por el sol.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/actividades/" class="btn btn--outline btn--lg">Ver todas las actividades</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>Spot viral</strong><span>1M+ fotos en redes</span></div><div class="stat"><strong>Hora dorada</strong><span>6-8 am y 5-7 pm</span></div><div class="stat"><strong>Niebla termal</strong><span>Solo en invierno</span></div><div class="stat"><strong>Sin restricciones</strong><span>Cámaras permitidas</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-vista-montanas.webp" alt="Spot fotográfico en pozas infinitas de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2>Los mejores spots fotográficos del destino</h2>
+        <p>Cada zona del destino tiene características fotográficas únicas. Planifica tu recorrido según lo que quieres capturar.</p>
+      </div>
+      <div class="card-grid card-grid--2" style="gap:1.5rem">
+        <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)">
+          <div style="background:#1A3A6B;padding:1rem 1.5rem;display:flex;align-items:center;gap:.75rem">
+            <span style="font-size:1.5rem">🌊</span>
+            <p style="font-weight:800;color:#FEC700;margin:0;font-size:1rem">Interior de las Grutas</p>
+          </div>
+          <div style="padding:1.5rem">
+            <p style="font-size:.9rem;color:#4A5568;margin-bottom:.75rem">Las grutas solo reciben luz natural en algunos puntos. El contraste entre zonas iluminadas y oscuridad crea efectos dramáticos únicos.</p>
+            <p style="font-size:.8rem;font-weight:700;color:#1A3A6B;margin-bottom:.25rem">📷 Configuración recomendada</p>
+            <p style="font-size:.8rem;color:#4A5568;margin:0">ISO 1600-3200, apertura f/2.8, velocidad lenta. Usar luz natural cuando sea posible.</p>
+          </div>
+        </div>
+        <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)">
+          <div style="background:#1A3A6B;padding:1rem 1.5rem;display:flex;align-items:center;gap:.75rem">
+            <span style="font-size:1.5rem">💧</span>
+            <p style="font-weight:800;color:#FEC700;margin:0;font-size:1rem">Albercas Escalonadas</p>
+          </div>
+          <div style="padding:1.5rem">
+            <p style="font-size:.9rem;color:#4A5568;margin-bottom:.75rem">La foto icónica de Tolantongo. Mejor desde la parte alta mirando hacia abajo con el cañón de fondo. Luz perfecta al amanecer.</p>
+            <p style="font-size:.8rem;font-weight:700;color:#1A3A6B;margin-bottom:.25rem">📷 Configuración recomendada</p>
+            <p style="font-size:.8rem;color:#4A5568;margin:0">Gran angular, f/8, ISO 100. Usar polarizador para reducir reflejos en el agua.</p>
+          </div>
+        </div>
+        <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)">
+          <div style="background:#1A3A6B;padding:1rem 1.5rem;display:flex;align-items:center;gap:.75rem">
+            <span style="font-size:1.5rem">🌫️</span>
+            <p style="font-weight:800;color:#FEC700;margin:0;font-size:1rem">Niebla termal del río</p>
+          </div>
+          <div style="padding:1.5rem">
+            <p style="font-size:.9rem;color:#4A5568;margin-bottom:.75rem">En días fríos (noviembre a marzo) el río termal genera niebla espectacular al amanecer. Solo disponible entre las 6 y las 9 am.</p>
+            <p style="font-size:.8rem;font-weight:700;color:#1A3A6B;margin-bottom:.25rem">📷 Mejor época</p>
+            <p style="font-size:.8rem;color:#4A5568;margin:0">Diciembre a febrero para mayor densidad de niebla. Llegar a las 6 am en punto.</p>
+          </div>
+        </div>
+        <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)">
+          <div style="background:#1A3A6B;padding:1rem 1.5rem;display:flex;align-items:center;gap:.75rem">
+            <span style="font-size:1.5rem">🏔️</span>
+            <p style="font-weight:800;color:#FEC700;margin:0;font-size:1rem">Miradores del cañón</p>
+          </div>
+          <div style="padding:1.5rem">
+            <p style="font-size:.9rem;color:#4A5568;margin-bottom:.75rem">Vistas panorámicas completas del cañón y el río desde arriba. Teleobjetivo para comprimir la perspectiva o gran angular para el panorama.</p>
+            <p style="font-size:.8rem;font-weight:700;color:#1A3A6B;margin-bottom:.25rem">📷 Configuración recomendada</p>
+            <p style="font-size:.8rem;color:#4A5568;margin:0">Hora dorada (amanecer/atardecer). Trípode para exposiciones largas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Planea tu actividad en Tolantongo</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🕕</div><p class="service-card__title">Llega al amanecer</p><p class="service-card__desc">Las 6 am son la mejor hora: menos visitantes, luz dorada y posible niebla termal en invierno.</p></div><div class="service-card"><div style="font-size:2.5rem">💧</div><p class="service-card__title">Protege tu equipo</p><p class="service-card__desc">Funda waterproof obligatoria para tu cámara o celular. El ambiente húmedo de las grutas puede dañar el equipo sin protección.</p><a href="/blog/que-llevar-a-tolantongo/" class="service-card__cta">Qué llevar →</a></div><div class="service-card"><div style="font-size:2.5rem">📱</div><p class="service-card__title">Celular también sirve</p><p class="service-card__desc">Los mejores fotógrafos de Tolantongo en Instagram usan iPhone o Android. El lugar hace la foto, no el equipo.</p></div><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Entrada incluye todo</p><p class="service-card__desc">No hay zonas restringidas para fotografía. El acceso a todos los spots está incluido en la entrada general.</p><a href="/precios/" class="btn">Ver tarifas</a></div></div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Mejores tomas del destino</h2>
+        <p>Inspiracion visual para tu visita fotografica</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-cascada-visitante-sonriente.webp" alt="Visitante sonriente posando junto a la cascada" width="800" height="400" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-dorado-atardecer.webp" alt="Pozas termales al atardecer dorado" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-atardecer-canon-hidalgo.webp" alt="Atardecer en el canon de Hidalgo" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-vista-montanas.webp" alt="Mujer contemplando las montanas desde la poza infinita" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Preguntas sobre fotografia</h2></div>
+      <div class="faq-list"><details><summary>¿Se permiten drones en Tolantongo?</summary><div class="faq-answer">El uso de drones puede estar sujeto a restricciones por parte del destino. Consultar directamente con la administración antes de llevar equipo de vuelo.</div></details><details><summary>¿Hay restricciones para fotografía comercial?</summary><div class="faq-answer">Para sesiones fotográficas comerciales o de producción es necesario solicitar permiso previo a la administración del destino.</div></details><details><summary>¿Cuál es la mejor época del año para fotografiar Tolantongo?</summary><div class="faq-answer">Invierno (diciembre-febrero) por la niebla termal. Primavera (marzo-mayo) para cielos despejados y vegetación verde. Evitar lluvias de verano para mayor claridad.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

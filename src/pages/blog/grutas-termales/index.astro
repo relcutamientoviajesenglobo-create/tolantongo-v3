@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => p.data.silo === 'grutas-termales' && (p.data.lang === 'es' || !p.data.lang))
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Grutas Termales de Tolantongo',
+  description: 'Artículos sobre las grutas, albercas escalonadas, el río termal, el cañón y la geología del destino termal más impresionante de México.',
+  url: 'https://tolantongo.com.mx/blog/grutas-termales/',
+};
+
+const breadcrumbs = [
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Grutas Termales' },
+];
+---
+
+<BaseLayout title="Grutas Termales de Tolantongo — Geología, Temperatura y Naturaleza" description="Todo sobre las grutas termales, albercas escalonadas, río termal y el cañón de Tolantongo. Geología, temperaturas por zona y maravillas naturales." canonical="/blog/grutas-termales/" schema={schema} breadcrumbs={breadcrumbs}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Silo: Grutas Termales</span>
+        <h1 class="hero__title">Grutas termales de Tolantongo</h1>
+        <p class="hero__desc">Geología, temperaturas, formaciones naturales y todo lo que hace de este cañón un fenómeno termal único en México.</p>
+        <div class="hero__actions">
+          <a href="/grutas/" class="btn btn--primary btn--lg">Explorar las grutas</a>
+          <a href="/blog/guias-viaje/" class="btn btn--outline btn--lg">Guías de viaje</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cueva-termal-visitantes.webp" alt="Interior de las Grutas de Tolantongo con vapor termal" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Artículos sobre las grutas termales</h2>
+        <p>Explora la ciencia, la naturaleza y los secretos detrás de uno de los destinos termales más espectaculares de América Latina.</p>
+      </div>
+      {posts.length > 0 ? (
+        <div class="card-grid card-grid--3 animate-on-scroll delay-1">
+          {posts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug}
+              image={post.data.image}
+              imageAlt={post.data.imageAlt}
+              author={post.data.author}
+              publishDate={post.data.publishDate}
+              readingTime={post.data.readingTime}
+              category={post.data.category}
+            />
+          ))}
+        </div>
+      ) : (
+        <p style="text-align:center;color:var(--mc-text-muted);padding:3rem 0">Próximamente artículos sobre las grutas termales. ¡Vuelve pronto!</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Más temas sobre Tolantongo</h2>
+      </div>
+      <div class="card-grid card-grid--3">
+        <a href="/blog/guias-viaje/" class="service-card">
+          <div class="service-card__icon">📋</div>
+          <h3 class="service-card__title">Guías de Viaje</h3>
+          <p class="service-card__desc">Qué llevar, cómo llegar, precios y todo para planear tu visita.</p>
+        </a>
+        <a href="/blog/actividades-aventura/" class="service-card">
+          <div class="service-card__icon">🧗</div>
+          <h3 class="service-card__title">Actividades y Aventura</h3>
+          <p class="service-card__desc">Senderismo, rappel, natación termal y fotografía.</p>
+        </a>
+        <a href="/blog/cultura-region/" class="service-card">
+          <div class="service-card__icon">🏛️</div>
+          <h3 class="service-card__title">Cultura y Región</h3>
+          <p class="service-card__desc">Historia, gastronomía Hñähñu y Cardonal.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

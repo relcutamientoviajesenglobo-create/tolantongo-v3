@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import VideoGallery from '../../components/VideoGallery.astro';
+import { touristAttraction } from '../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Aguas Termales de Tolantongo',
+    description: 'Aguas termales naturales a 36°C todo el año en Grutas de Tolantongo, Hidalgo, México.',
+    url: 'https://tolantongo.com.mx/aguas-termales/',
+  }),
+];
+---
+
+<BaseLayout title="Aguas Termales de Tolantongo — 36°C Naturales en Hidalgo México" description="Aguas termales de Tolantongo: 36°C naturales de origen geotérmico, ricas en carbonatos y minerales. Grutas, albercas y río termal en Cardonal, Hidalgo." canonical="/aguas-termales/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Aguas Termales de Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Termalismo natural · Hidalgo</span>
+        <h1 class="hero__title">Aguas Termales de Tolantongo</h1>
+        <p class="hero__desc">Las aguas termales de Tolantongo emergen a 36°C constantes desde el interior de la Sierra Madre Oriental, sin calentamiento artificial. Propiedades minerales únicas en México.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/grutas/" class="btn btn--outline btn--lg">Qué son las grutas</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>36°C</strong><span>Constantes todo el año</span></div><div class="stat"><strong>100% Natural</strong><span>Sin artificios</span></div><div class="stat"><strong>Minerales</strong><span>Carbonatos y sulfatos</span></div><div class="stat"><strong>Hidalgo</strong><span>México</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-vapor-rio-termal.webp" alt="Vapor termal sobre el río en Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container" style="max-width:900px">
+      <h2 style="margin-bottom:1.25rem">¿Qué son las aguas termales de Tolantongo?</h2>
+      <p style="margin-bottom:1rem">Las aguas termales de Tolantongo son aguas subterráneas calentadas por actividad geotérmica profunda que emergen en el Cañón de Tolantongo, municipio de Cardonal, Hidalgo, a una temperatura constante de 36°C. Son 100% naturales: el calor proviene de la actividad geotérmica del subsuelo y no de ningún sistema de calefacción artificial.</p>
+      <p style="margin-bottom:1rem">El proceso de formación de estas aguas es el siguiente: el agua de lluvia se infiltra en el subsuelo, desciende hasta capas rocosas calentadas por el gradiente geotérmico terrestre, se mineraliza al disolver minerales de la roca, y finalmente emerge en las fracturas del cañón a través de los manantiales termales visibles en las grutas, el río y las albercas.</p>
+      <p style="margin-bottom:1.5rem">La composición química del agua termal de Tolantongo incluye carbonatos de calcio (que depositan travertino en las albercas), bicarbonatos, sulfatos y minerales traza. Esta composición es responsable tanto de la dureza característica del agua como del efecto relajante documentado en el baño termal prolongado.</p>
+      <div class="card-grid card-grid--3" style="gap:1.25rem">
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🌡️ 36°C constantes</p><p style="font-size:.875rem;color:#4A5568;margin:0">La temperatura no varía con las estaciones. En invierno se forma niebla sobre el agua al contacto con el aire frío.</p></div>
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🪨 Depósito de travertino</p><p style="font-size:.875rem;color:#4A5568;margin:0">El carbonato de calcio del agua deposita capas de travertino en las albercas, modificando lentamente su forma de modo natural.</p></div>
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">⚗️ Origen geotérmico</p><p style="font-size:.875rem;color:#4A5568;margin:0">Calentadas por el gradiente térmico del interior de la tierra. El mismo proceso que origina los géiseres y volcanes.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería fotográfica</h2>
+        <p>Descubre la belleza de las aguas termales naturales en Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-pozas-termales-panoramica-amplia.webp" alt="Vista panorámica amplia de las pozas termales de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-panoramica-nublada.webp" alt="Panorámica de las pozas termales en día nublado" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-panoramica-nublada-2.webp" alt="Pozas termales de Tolantongo con neblina entre las montañas" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-vista-alta-soleada.webp" alt="Vista alta y soleada de las pozas termales escalonadas" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-vista-general-canon.webp" alt="Vista general de las pozas termales dentro del cañón" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cueva-termal-silueta-agua.webp" alt="Silueta reflejada en el agua de la cueva termal de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Experimenta las aguas termales</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🌊</div><p class="service-card__title">Las Grutas Termales</p><p class="service-card__desc">Canal de agua a 36°C dentro de cuevas de roca caliza natural.</p><a href="/grutas/" class="btn">Ver grutas</a></div><div class="service-card"><div style="font-size:2.5rem">💧</div><p class="service-card__title">Albercas Escalonadas</p><p class="service-card__desc">6 piscinas de roca natural con agua termal en cascada.</p><a href="/grutas/albercas-escalonadas/" class="btn">Ver albercas</a></div><div class="service-card"><div style="font-size:2.5rem">🏞️</div><p class="service-card__title">Río Termal</p><p class="service-card__desc">1.5 km de río termal dentro del cañón.</p><a href="/grutas/rio/" class="btn">Ver río</a></div><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Precios de acceso</p><p class="service-card__desc">Entrada adulto $220 MXN incluye todas las zonas termales.</p><a href="/precios/" class="btn">Ver tarifas</a></div></div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['rio-turquesa-rocas','rio-turquesa-tranquilo','poza-termal-vapor']} lang="es" title="Videos de las aguas termales" columns={3} />
+</BaseLayout>

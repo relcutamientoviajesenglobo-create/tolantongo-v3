@@ -1,0 +1,16 @@
+{
+  "name": "Carlos Martínez",
+  "role": "Guía Local Certificado",
+  "bio": "Guía de turismo de aventura certificado por la SECTUR, nacido y criado en el municipio de Cardonal, Hidalgo. Con más de 8 años guiando excursiones por el Cañón de Tolantongo, las rutas de senderismo de la Sierra Gorda y las comunidades Hñähñu de la región. Especialista en rappel, exploración de grutas y turismo sustentable. Ha recorrido cada sendero, explorado cada gruta y conoce la temperatura de cada poza en cada temporada del año.",
+  "avatar": "/media/authors/guia-local.jpg",
+  "expertise": [
+    "Senderismo y rutas de montaña",
+    "Rappel y turismo de aventura",
+    "Exploración de grutas y cuevas",
+    "Flora y fauna de la Sierra Gorda",
+    "Cultura e historia Hñähñu"
+  ],
+  "social": {
+    "instagram": "https://instagram.com/grutasdetolantongomx"
+  }
+}

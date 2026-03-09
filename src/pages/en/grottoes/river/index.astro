@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import VideoGallery from '../../../../components/VideoGallery.astro';
+import { touristAttraction, faqPage } from '../../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Thermal River — Grutas de Tolantongo',
+    description: '1.5 km thermal river at 36°C running through the Tolantongo canyon in Hidalgo.',
+    url: 'https://tolantongo.com.mx/en/grottoes/river/',
+  }),
+  faqPage([
+    { question: 'Can you swim in the Tolantongo River?', answer: 'Yes, the river is navigable and swimmable throughout its entire course. The depth varies but most of the route allows for comfortable walking or swimming.' },
+    { question: 'Is there a dangerous current in the river?', answer: 'The current is gentle for most of the route. During the rainy season it may increase. Always respect the destination\'s signage about accessible areas.' },
+    { question: 'Is river access included with admission?', answer: 'Yes. Walking the river route is part of the general access to the destination. There is no additional cost.' },
+  ]),
+];
+---
+
+<BaseLayout title="Tolantongo River — 1.5 km Thermal River at 36°C in Hidalgo" description="The Tolantongo River is a unique thermal river: 1.5 km of water at 36°C (97°F) inside an 800-meter canyon with underground sections. Included with general admission." canonical="/en/grottoes/river/" schema={schema} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">🏠 Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/en/grottoes/" class="breadcrumbs__link">Grottoes and Pools</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Tolantongo River</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">One of a kind in Mexico</span>
+        <h1 class="hero__title">Tolantongo River — The underground thermal river</h1>
+        <p class="hero__desc">A thermal river at 36°C (97°F) that flows 1.5 kilometers through a canyon with vertical walls. The most unique experience at the destination.</p>
+        <div class="hero__actions">
+          <a href="/en/prices/" class="btn btn--primary btn--lg">See admission prices</a>
+          <a href="/en/grottoes/" class="btn btn--outline btn--lg">See the grottoes</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>1.5 km</strong><span>Thermal route</span></div><div class="stat"><strong>36°C</strong><span>Constant water</span></div><div class="stat"><strong>Underground</strong><span>Inside the canyon</span></div><div class="stat"><strong>Natural</strong><span>Unaltered</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-rio-turquesa-rocas-naturales.webp" alt="Turquoise thermal river at Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+        <div>
+          <h2 style="margin-bottom:1.25rem">Mexico's most unique thermal river</h2>
+          <p style="margin-bottom:1rem">The Tolantongo River is a thermal body of water that flows naturally through the canyon interior for approximately 1.5 kilometers. Unlike conventional rivers, its water comes entirely from the canyon's geothermal springs, maintaining its temperature at 36°C (97°F) year-round.</p>
+          <p style="margin-bottom:1rem">The river's course runs between limestone walls up to 800 meters high. In several stretches the river goes underground as it passes through natural caves and tunnels, creating a unique swimming experience where visitors alternate between open-air sections and illuminated grotto passages.</p>
+          <p>The river's depth varies between 50 cm and 1.5 meters depending on the stretch. It is walkable throughout its entire length, although water shoes with grip are recommended.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🌊 Stable temperature</p><p style="font-size:.9rem;color:#4A5568;margin:0">36°C year-round. In winter the difference with the cold canyon air creates a thermal mist over the surface.</p></div>
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🕳️ Underground stretches</p><p style="font-size:.9rem;color:#4A5568;margin:0">At several points the river passes through caves and tunnels. Bringing a flashlight is highly recommended.</p></div>
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🐟 Aquatic ecosystem</p><p style="font-size:.9rem;color:#4A5568;margin:0">The river is home to small thermophilic fish adapted to geothermal conditions. Unique wildlife found nowhere else in the world.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">What you need for the river</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">👟</div><p class="service-card__title">Water shoes</p><p class="service-card__desc">Essential. The riverbed has irregular rocks and some slippery areas.</p><a href="/en/blog/what-to-bring-to-tolantongo/" class="service-card__cta">See full list →</a></div><div class="service-card"><div style="font-size:2.5rem">🔦</div><p class="service-card__title">Flashlight</p><p class="service-card__desc">For the underground stretches. A hand or headlamp flashlight works. Waterproof is recommended.</p></div><div class="service-card"><div style="font-size:2.5rem">📷</div><p class="service-card__title">Waterproof camera</p><p class="service-card__desc">The river is one of the most photogenic settings. A waterproof case for your phone is sufficient.</p></div><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Included with admission</p><p class="service-card__desc">River access is included in the general admission price. No additional cost.</p><a href="/en/prices/" class="btn">See prices</a></div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Photo Gallery</h2>
+        <p>Discover the beauty of the thermal river at Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-rio-turquesa-atardecer.webp" alt="Turquoise thermal river at sunset inside the Tolantongo canyon" width="900" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-balneario-natural-2.webp" alt="Natural swimming area along the turquoise thermal river" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-ribera-natural.webp" alt="Natural riverbank along the turquoise thermal river" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-rio-turquesa-canon.webp" alt="Waterfall flowing into the turquoise river inside the canyon" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-termal-mujer-relax-rojo.webp" alt="Woman in red relaxing in a thermal pool by the river" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['rio-turquesa-cascada','rio-turquesa-rocas']} lang="en" title="Thermal river videos" columns={2} />
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Questions about the river</h2></div>
+      <div class="faq-list"><details><summary>Can you swim in the Tolantongo River?</summary><div class="faq-answer">Yes, the river is navigable and swimmable throughout its entire course. The depth varies but most of the route allows for comfortable walking or swimming.</div></details><details><summary>Is there a dangerous current in the river?</summary><div class="faq-answer">The current is gentle for most of the route. During the rainy season it may increase. Always respect the destination's signage about accessible areas.</div></details><details><summary>Is river access included with admission?</summary><div class="faq-answer">Yes. Walking the river route is part of the general access to the destination. There is no additional cost.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

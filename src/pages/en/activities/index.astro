@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { touristAttraction, faqPage } from '../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Activities at Grutas de Tolantongo',
+    description: 'Thermal swimming, hiking, rappelling and photography at Grutas de Tolantongo, Hidalgo.',
+    url: 'https://tolantongo.com.mx/en/activities/',
+  }),
+  faqPage([
+    { question: 'What activities are included with general admission?', answer: 'Admission includes access to all areas: thermal grottoes, tiered pools, 1.5 km thermal river, viewpoints and canyon. No guided adventure activities are included in the admission price.' },
+    { question: 'Are there activities for young children?', answer: 'Yes. The smaller pools are perfect for children. The grottoes are also accessible with kids. Water shoes and constant supervision are recommended.' },
+    { question: 'Can you snorkel or scuba dive?', answer: 'No. The swimming areas inside the grottoes are shallow (40\u201380 cm on average) and are not set up for underwater activities with equipment.' },
+  ]),
+];
+---
+
+<BaseLayout title="Activities at Grutas de Tolantongo — Thermal Swimming, Hiking & Adventure" description="Activities at Grutas de Tolantongo: swimming in thermal waters at 36°C, hiking through the 800 m canyon, rappelling and unique nature photography in Hidalgo." canonical="/en/activities/" schema={schema} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">🏠 Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Activities</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Adventure and nature</span>
+        <h1 class="hero__title">Activities at Grutas de Tolantongo</h1>
+        <p class="hero__desc">Thermal water swimming, canyon hiking, unique landscape photography and adventure experiences inside one of Mexico's natural wonders.</p>
+        <div class="hero__actions">
+          <a href="/en/prices/" class="btn btn--primary btn--lg">See admission prices</a>
+          <a href="/en/how-to-get-here/" class="btn btn--outline btn--lg">How to get here</a>
+        </div>
+
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-poza-termal-cascada-mujer.webp" alt="Thermal swimming at Grutas de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+    </svg>
+  </section>
+  <section class="section section--gray" aria-labelledby="pc-title">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2 id="pc-title">What can you do at Tolantongo?</h2>
+        <p>The destination offers activities for all types of visitors, from relaxation in thermal waters to canyon adventure.</p>
+      </div>
+      <div class="card-grid card-grid--4 animate-on-scroll delay-1"><a href="/en/activities/thermal-swimming/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-poza-termal-cascada-mujer.webp" alt="Thermal swimming" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Main activity</span>
+            <p class="photo-card__title">Thermal Swimming</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">Bathing in 36°C waters inside the grottoes and pools.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a><a href="/en/activities/hiking/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-cascada-sendero-visitante.webp" alt="Canyon hiking" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Hiking</span>
+            <p class="photo-card__title">Canyon Hiking</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">Trails to panoramic viewpoints at 800 m elevation.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a><a href="/en/activities/rappelling/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-cascada-roca-mineral-vertical.webp" alt="Rappelling and adventure in the canyon" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Adventure</span>
+            <p class="photo-card__title">Rappelling & Adventure</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">Supervised adventure activities inside the canyon.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a><a href="/en/activities/photography/" class="photo-card">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-poza-infinita-mujer-canon.webp" alt="Nature photography at Tolantongo" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Photography</span>
+            <p class="photo-card__title">Nature Photography</p>
+            <p style="font-size:.875rem;color:#4A5568;margin-bottom:.5rem">One of the most spectacular photography destinations in Mexico.</p>
+            <div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container animate-on-scroll" style="max-width:860px">
+      <h2 style="margin-bottom:1.25rem">Tolantongo: a destination for all ages</h2>
+      <p style="margin-bottom:1rem">Grutas de Tolantongo offers activities suitable for families with children, couples, groups of friends and seniors. The main activity — bathing in the thermal waters — is accessible to everyone thanks to the variety of pools with different depths.</p>
+      <p>Hiking and adventure activities are optional and undertaken at your own initiative. The destination does not have official hired guides for all routes, so it is recommended to go accompanied and bring appropriate gear for activities outside the main areas.</p>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header animate-on-scroll" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Plan your day at Tolantongo</h2></div>
+      <div class="service-cards animate-on-scroll delay-1"><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">2026 admission prices</p><p class="service-card__desc">Adult admission $220 MXN, child $110 MXN. Hours 6:00 AM–8:00 PM.</p><a href="/en/prices/" class="btn">See rates</a></div><div class="service-card"><div style="font-size:2.5rem">🚗</div><p class="service-card__title">How to get here</p><p class="service-card__desc">180 km from Mexico City. Paved road. Approximately 3 hours.</p><a href="/en/how-to-get-here/" class="btn">See route</a></div><div class="service-card"><div style="font-size:2.5rem">📋</div><p class="service-card__title">What to bring</p><p class="service-card__desc">Complete list of gear, clothing and essential items.</p><a href="/en/blog/que-llevar-a-tolantongo/" class="service-card__cta">See list →</a></div><div class="service-card"><div style="font-size:2.5rem">🏕️</div><p class="service-card__title">Stay overnight</p><p class="service-card__desc">Cabins and camping to enjoy the full experience.</p><a href="/en/lodging/" class="service-card__cta">See lodging →</a></div></div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header animate-on-scroll"><h2 id="faq-t">Questions about activities</h2></div>
+      <div class="faq-list animate-on-scroll delay-1"><details><summary>What activities are included with general admission?</summary><div class="faq-answer">Admission includes access to all areas: thermal grottoes, tiered pools, 1.5 km thermal river, viewpoints and canyon. No guided adventure activities are included in the admission price.</div></details><details><summary>Are there activities for young children?</summary><div class="faq-answer">Yes. The smaller pools are perfect for children. The grottoes are also accessible with kids. Water shoes and constant supervision are recommended.</div></details><details><summary>Can you snorkel or scuba dive?</summary><div class="faq-answer">No. The swimming areas inside the grottoes are shallow (40–80 cm on average) and are not set up for underwater activities with equipment.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

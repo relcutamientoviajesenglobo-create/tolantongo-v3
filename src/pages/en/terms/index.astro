@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { webPage } from '../../../i18n/schema';
+
+const schema = [
+  webPage({
+    name: 'Terms & Conditions — Grutas de Tolantongo',
+    url: 'https://tolantongo.com.mx/en/terms/',
+    description: 'Terms and conditions for the Grutas de Tolantongo website.',
+  }),
+];
+---
+
+<BaseLayout lang="en" title="Terms & Conditions — Grutas de Tolantongo" description="Terms and conditions for visiting Grutas de Tolantongo: destination rules, visitor responsibility, environmental care and refund policy." canonical="/en/terms/" schema={schema}>
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Terms & Conditions</span></li></ol></div></div>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Legal document</span>
+        <h1 class="hero__title">Terms & Conditions</h1>
+        <p class="hero__desc">Access and use conditions for the Grutas de Tolantongo destination</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container" style="max-width:800px">
+      <div style="background:white;border-radius:20px;padding:2.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:1.5rem">
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">1. Access to the destination</h2><p style="font-size:.925rem;color:#4A5568">Access to Grutas de Tolantongo is subject to payment of the current cash admission fee. The destination reserves the right to limit access when the maximum daily capacity established by the administrating community is reached.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">2. Visitor responsibility</h2><p style="font-size:.925rem;color:#4A5568">Visitors are responsible for their personal safety within the destination. Use of thermal areas is at your own risk. It is recommended not to swim alone, to follow posted signage and not to venture outside designated areas.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">3. Environmental care</h2><p style="font-size:.925rem;color:#4A5568">The following is strictly prohibited: introducing detergents or soaps into the thermal waters, littering in the river or canyon, making fires outside designated areas, and damaging rock formations and local wildlife.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">4. Refunds and cancellations</h2><p style="font-size:.925rem;color:#4A5568">Admission fees are non-refundable. For lodging reservations, cancellations made more than 48 hours in advance may be arranged directly with the destination's administration.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">5. Jurisdiction</h2><p style="font-size:.925rem;color:#4A5568">Any dispute arising from the use of the destination shall be subject to the jurisdiction of the competent courts of the municipality of Cardonal, Hidalgo, Mexico.</p></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

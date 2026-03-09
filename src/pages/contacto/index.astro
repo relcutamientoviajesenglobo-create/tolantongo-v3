@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { localBusiness } from '../../i18n/schema';
+
+const schema = [
+  localBusiness({
+    name: 'Contacto — Grutas de Tolantongo',
+    description: 'Teléfono, WhatsApp y correo de Grutas de Tolantongo.',
+    url: 'https://tolantongo.com.mx/contacto/',
+  }),
+];
+---
+
+<BaseLayout title="Contacto — Grutas de Tolantongo · Teléfono, WhatsApp y Correo" description="Contacta a Grutas de Tolantongo: +52 55 6465 0507, WhatsApp directo e info@grutasdetolantongo.mx. Consultas sobre precios, reservas y disponibilidad." canonical="/contacto/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Contacto</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Estamos aquí para ayudarte</span>
+        <h1 class="hero__title">Contáctanos</h1>
+        <p class="hero__desc">Para preguntas sobre precios, reservas de hospedaje, disponibilidad o cualquier información sobre tu visita a las Grutas de Tolantongo.</p>
+        <div class="hero__actions">
+          <a href="tel:+525564650507" class="btn btn--primary btn--lg">📞 Llamar ahora</a>
+          <a href="https://wa.me/525564650507" class="btn btn--outline btn--lg">💬 WhatsApp</a>
+        </div>
+        
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-vista-canon-montanas-hidalgo.webp" alt="Vista del cañón de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+    </svg>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header animate-on-scroll" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Canales de contacto disponibles</h2></div>
+      <div class="service-cards animate-on-scroll delay-1"><div class="service-card"><div style="font-size:2.5rem">📞</div><p class="service-card__title">Teléfono</p><p class="service-card__desc">Llama directamente para información rápida sobre precios, horarios y disponibilidad.</p><p style="font-size:1.3rem;font-weight:900;color:#1A3A6B;margin:.5rem 0">+52 55 6465 0507</p><p style="font-size:.75rem;color:#1A3A6B;opacity:.8">Lunes a domingo · 6:00 – 20:00</p></div><div class="service-card"><div style="font-size:2.5rem">💬</div><p class="service-card__title">WhatsApp</p><p class="service-card__desc">La vía más rápida para consultas sobre disponibilidad de cabañas y preguntas específicas.</p><a href="https://wa.me/525564650507" class="btn">Escribir ahora</a></div><div class="service-card"><div style="font-size:2.5rem">✉️</div><p class="service-card__title">Correo electrónico</p><p class="service-card__desc">Para consultas que no son urgentes o para grupos y eventos especiales.</p><a href="mailto:info@grutasdetolantongo.mx" style="color:#1A3A6B;font-weight:700;font-size:.9rem">info@grutasdetolantongo.mx</a></div><div class="service-card"><div style="font-size:2.5rem">📍</div><p class="service-card__title">Ubicación</p><p class="service-card__desc">El Alberto s/n, Cardonal, Hidalgo, México. A 180 km de Ciudad de México.</p><a href="/como-llegar/" class="service-card__cta">Cómo llegar →</a></div></div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Visita Tolantongo</h2>
+        <p>Un destino natural unico en Hidalgo, Mexico</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-pozas-termales-panoramica-amplia.webp" alt="Vista panoramica de las pozas termales de Tolantongo" width="800" height="400" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-puente-visitantes.webp" alt="Puente peatonal con visitantes junto a cascada" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-balneario-natural.webp" alt="Rio turquesa en el balneario natural" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-vista-canon-montanas-hidalgo.webp" alt="Vista del canon y montanas de Hidalgo" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header animate-on-scroll"><h2 id="faq-t">Preguntas frecuentes de contacto</h2></div>
+      <div class="faq-list animate-on-scroll delay-1"><details><summary>¿Cuál es la mejor manera de reservar una cabaña?</summary><div class="faq-answer">Lo más directo es llamar por teléfono o WhatsApp. No hay sistema de reservas online actualmente. Confirmar disponibilidad y pagar en efectivo al llegar.</div></details><details><summary>¿A qué hora puedo llamar?</summary><div class="faq-answer">El destino está operativo de 6:00 a 20:00 horas todos los días. Para reservas con anticipación se puede intentar llamar en cualquier horario de atención.</div></details><details><summary>¿Tienen cuenta en redes sociales?</summary><div class="faq-answer">Sí. Puedes encontrar información actualizada, fotos y avisos de cierre en las redes sociales del destino en Facebook e Instagram.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

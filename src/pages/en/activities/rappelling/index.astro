@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import { touristAttraction, faqPage } from '../../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Rappelling at Grutas de Tolantongo',
+    description: 'Rappelling adventure and canyon descent at Tolantongo, Hidalgo.',
+    url: 'https://tolantongo.com.mx/en/activities/rappelling/',
+  }),
+  faqPage([
+    { question: 'Is previous experience needed for rappelling?', answer: 'Local operators offer activities for beginners with a safety briefing included. No previous experience is required.' },
+    { question: 'What equipment do you need to bring?', answer: 'Safety equipment (harness, helmet, ropes) is provided by the operators. You only need comfortable clothing and closed-toe shoes.' },
+    { question: 'Are adventure activities available every day?', answer: 'Not necessarily. Operators work mainly on weekends and holidays. There is more availability during peak season. Check upon arrival.' },
+  ]),
+];
+---
+
+<BaseLayout title="Rappelling at Grutas de Tolantongo — Canyon Adventure in Hidalgo" description="Rappelling and adventure at Tolantongo Canyon: limestone rock descent, zip line and extreme activities in Hidalgo. Local operators on site." canonical="/en/activities/rappelling/" schema={schema} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">🏠 Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/en/activities/" class="breadcrumbs__link">Activities</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Rappelling & Adventure at Tolantongo Canyon</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Extreme adventure</span>
+        <h1 class="hero__title">Rappelling & Adventure at Tolantongo Canyon</h1>
+        <p class="hero__desc">Adventure activities inside one of Mexico's most spectacular canyons. Rappelling on limestone walls with views of the thermal river.</p>
+        <div class="hero__actions">
+          <a href="/en/prices/" class="btn btn--primary btn--lg">See admission prices</a>
+          <a href="/en/activities/" class="btn btn--outline btn--lg">See all activities</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>800 m</strong><span>Canyon walls</span></div><div class="stat"><strong>Limestone</strong><span>Ideal for rappelling</span></div><div class="stat"><strong>Thermal view</strong><span>Unique in Mexico</span></div><div class="stat"><strong>Operators</strong><span>On site</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cascada-roca-mineral-vertical.webp" alt="Vertical rock formation for rappelling at Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div style="max-width:860px;margin:0 auto">
+        <h2 style="margin-bottom:1.25rem">Adventure in a unique setting</h2>
+        <p style="margin-bottom:1rem">Tolantongo Canyon, with its limestone walls up to 800 meters high, is one of the most spectacular adventure settings in central Mexico. Rappelling in this environment combines the adrenaline of the descent with the unique view of an active thermal river at the bottom of the canyon.</p>
+        <p style="margin-bottom:1rem">Adventure activities at the destination are operated by certified local groups from the indigenous Hnahnu community. Check availability directly at the destination upon arrival, as operators work on specific days based on demand.</p>
+        <div style="background:#FEC700;border-radius:16px;padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1rem;margin-top:1.5rem">
+          <span style="font-size:1.5rem;flex-shrink:0">⚠️</span>
+          <div><p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">Activities with additional cost</p><p style="color:#1A3A6B;font-size:.9rem;margin:0">Adventure activities (rappelling, zip line) have an additional cost beyond the general admission price. Cash payment directly with operators at the destination.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Plan your activity at Tolantongo</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🪢</div><p class="service-card__title">Rappelling</p><p class="service-card__desc">Limestone rock descent with views of the thermal river. Equipment provided by local operators.</p></div><div class="service-card"><div style="font-size:2.5rem">🏹</div><p class="service-card__title">Zip line</p><p class="service-card__desc">Zip line over the canyon available depending on season. Check availability upon arrival.</p></div><div class="service-card"><div style="font-size:2.5rem">🥾</div><p class="service-card__title">Adventure hiking</p><p class="service-card__desc">High-difficulty trails to the upper part of the canyon for experienced visitors.</p><a href="/en/activities/hiking/" class="service-card__cta">See hiking →</a></div><div class="service-card"><div style="font-size:2.5rem">💵</div><p class="service-card__title">Cash payment</p><p class="service-card__desc">All adventure activities are paid in cash directly to the operators. Bring enough cash.</p><a href="/en/how-to-get-here/" class="service-card__cta">See tips →</a></div></div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>The adventure canyon</h2>
+        <p>Explore the vertical formations where rappelling takes place</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-cascada-visitante-poza.webp" alt="Visitor next to waterfall and natural pool" width="800" height="400" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-roca-mineral-vertical.webp" alt="Waterfall on vertical mineral rock" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-sendero-panoramica.webp" alt="Panoramic trail next to waterfall" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-canon-cascada-paisaje.webp" alt="Canyon landscape with waterfall" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Questions about rappelling</h2></div>
+      <div class="faq-list"><details><summary>Is previous experience needed for rappelling?</summary><div class="faq-answer">Local operators offer activities for beginners with a safety briefing included. No previous experience is required.</div></details><details><summary>What equipment do you need to bring?</summary><div class="faq-answer">Safety equipment (harness, helmet, ropes) is provided by the operators. You only need comfortable clothing and closed-toe shoes.</div></details><details><summary>Are adventure activities available every day?</summary><div class="faq-answer">Not necessarily. Operators work mainly on weekends and holidays. There is more availability during peak season. Check upon arrival.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import VideoGallery from '../../../../components/VideoGallery.astro';
+import { touristAttraction, faqPage } from '../../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Thermal Swimming — Grutas de Tolantongo',
+    description: 'Swim in 36°C thermal waters in the tiered pools and thermal river at Tolantongo.',
+    url: 'https://tolantongo.com.mx/en/activities/thermal-swimming/',
+  }),
+  faqPage([
+    { question: 'Is there a depth limit for swimming?', answer: 'In the grottoes the channel is 40–80 cm deep. In the pools it varies between 30 cm and 1.2 m. In the river it can reach 1.5 m in some stretches.' },
+    { question: 'Can you swim in winter?', answer: 'Yes. The constant 36°C temperature makes swimming in winter especially pleasant. On cold days the temperature contrast creates mist over the water, a unique visual spectacle.' },
+    { question: 'Is it suitable for non-swimmers?', answer: 'Yes. Most areas have manageable depth. The grottoes and the beginning of the river are perfect for those who cannot swim. Always go accompanied.' },
+  ]),
+];
+---
+
+<BaseLayout title="Thermal Swimming at Grutas de Tolantongo — 36°C Waters in Limestone Rock" description="Thermal swimming at Tolantongo: bathing in 36°C geothermal waters inside grottoes, pools and thermal river. The unique experience of Grutas de Tolantongo in Hidalgo." canonical="/en/activities/thermal-swimming/" schema={schema} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">🏠 Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/en/activities/" class="breadcrumbs__link">Activities</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Thermal Swimming at Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Main activity</span>
+        <h1 class="hero__title">Thermal Swimming at Tolantongo</h1>
+        <p class="hero__desc">Bathing in natural 36°C geothermal waters inside limestone grottoes, tiered pools and a 1.5 km thermal river. The central activity at Grutas de Tolantongo.</p>
+        <div class="hero__actions">
+          <a href="/en/prices/" class="btn btn--primary btn--lg">See admission prices</a>
+          <a href="/en/activities/" class="btn btn--outline btn--lg">See all activities</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>36°C</strong><span>Water year-round</span></div><div class="stat"><strong>3 zones</strong><span>Grottoes, pools, river</span></div><div class="stat"><strong>1.5 km</strong><span>Navigable river</span></div><div class="stat"><strong>For everyone</strong><span>Adults and children</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-poza-termal-cascada-mujer.webp" alt="Thermal swimming in pool with waterfall at Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2>Available swimming zones</h2>
+        <p>The destination offers three distinct zones for thermal swimming, each with unique characteristics.</p>
+      </div>
+      <div class="card-grid card-grid--3">
+        <a href="/en/grottoes/" class="photo-card"><div class="photo-card__img">🌊</div><div class="photo-card__body"><span class="photo-card__tag">Most popular</span><p class="photo-card__title">Thermal Grottoes</p><p style="font-size:.875rem;color:#4A5568">36°C water channel inside natural limestone caves. The most unique experience.</p><div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="/en/grottoes/tiered-pools/" class="photo-card"><div class="photo-card__img">💧</div><div class="photo-card__body"><span class="photo-card__tag">Panoramic views</span><p class="photo-card__title">Tiered Pools</p><p style="font-size:.875rem;color:#4A5568">6 cascading natural rock pools. Varied depth, suitable for all ages.</p><div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="/en/grottoes/river/" class="photo-card"><div class="photo-card__img">🏞️</div><div class="photo-card__body"><span class="photo-card__tag">Unique in Mexico</span><p class="photo-card__title">Thermal River</p><p style="font-size:.875rem;color:#4A5568">1.5 km of natural thermal river inside the canyon. Open and underground stretches.</p><div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <h2 style="margin-bottom:1.25rem">Why is thermal swimming at Tolantongo different?</h2>
+      <p style="margin-bottom:1rem">Thermal swimming at Tolantongo does not take place in a man-made pool: it happens in natural limestone formations, inside caves with ceilings up to 15 meters high and in a river that flows through the interior of an 800-meter canyon. The constant 36°C temperature year-round allows you to enjoy bathing in any season.</p>
+      <p style="margin-bottom:1rem">The thermal effect of 36°C water has documented relaxing properties: it dilates blood vessels, reduces muscle tension and generates a sustained feeling of well-being. The high mineral content of the water (carbonates, bicarbonates and sulfates) adds additional properties to the bathing experience.</p>
+      <p>Unlike conventional spas that artificially heat water, at Tolantongo the heat is 100% geothermal: it comes from deep within the earth without any artificial intervention.</p>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Plan your activity at Tolantongo</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">2026 admission prices</p><p class="service-card__desc">$220 MXN adult, $110 MXN child. Includes access to all 3 swimming zones.</p><a href="/en/prices/" class="btn">See rates</a></div><div class="service-card"><div style="font-size:2.5rem">🕐</div><p class="service-card__title">Hours</p><p class="service-card__desc">Open every day from 6:00 AM to 8:00 PM. The least crowded times are weekday mornings.</p></div><div class="service-card"><div style="font-size:2.5rem">👟</div><p class="service-card__title">What to bring</p><p class="service-card__desc">Swimsuit, water shoes, towel and biodegradable sunscreen.</p><a href="/en/blog/que-llevar-a-tolantongo/" class="service-card__cta">See full list →</a></div><div class="service-card"><div style="font-size:2.5rem">🏕️</div><p class="service-card__title">Stay overnight</p><p class="service-card__desc">Staying at the destination allows you to swim at night without other visitors.</p><a href="/en/lodging/" class="service-card__cta">See lodging →</a></div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Photo Gallery</h2>
+        <p>Discover the thermal swimming experience at Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-poza-termal-mujer-terrazas.webp" alt="Woman enjoying thermal pool on natural terraces overlooking the canyon" width="900" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-mujer-blanco.webp" alt="Woman in white swimsuit bathing in a thermal pool" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-mujer-pareo-rosa.webp" alt="Woman with pink sarong at the edge of a thermal pool" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-vista-canon.webp" alt="Woman in infinity pool gazing at the canyon view" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-paisaje.webp" alt="Woman relaxing in infinity pool with mountain landscape behind" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['poza-infinita-canon','natacion-atardecer','poza-cenital']} lang="en" title="Thermal swimming videos" columns={3} />
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Questions about thermal swimming</h2></div>
+      <div class="faq-list"><details><summary>Is there a depth limit for swimming?</summary><div class="faq-answer">In the grottoes the channel is 40–80 cm deep. In the pools it varies between 30 cm and 1.2 m. In the river it can reach 1.5 m in some stretches.</div></details><details><summary>Can you swim in winter?</summary><div class="faq-answer">Yes. The constant 36°C temperature makes swimming in winter especially pleasant. On cold days the temperature contrast creates mist over the water, a unique visual spectacle.</div></details><details><summary>Is it suitable for non-swimmers?</summary><div class="faq-answer">Yes. Most areas have manageable depth. The grottoes and the beginning of the river are perfect for those who cannot swim. Always go accompanied.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import VideoPlayer from '../../../components/VideoPlayer.astro';
+import { touristAttraction, faqPage } from '../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Senderismo en Grutas de Tolantongo',
+    description: 'Rutas de senderismo en el cañón de Tolantongo con miradores espectaculares.',
+    url: 'https://tolantongo.com.mx/actividades/senderismo/',
+  }),
+  faqPage([
+    { question: '¿Los senderos están señalizados?', answer: 'Los senderos principales tienen señalización básica. Para los senderos altos se recomienda ir acompañado y orientarse con el personal del destino.' },
+    { question: '¿Se puede hacer senderismo con niños?', answer: 'El sendero principal del fondo del cañón es apto para niños. Los senderos de ascenso a los miradores requieren cierta condición física y no son recomendables para niños pequeños.' },
+    { question: '¿Hay guías de senderismo disponibles?', answer: 'El destino no ofrece guías oficiales de senderismo. Los senderos son de libre acceso incluidos en la entrada general.' },
+  ]),
+];
+---
+
+<BaseLayout title="Senderismo en Grutas de Tolantongo — Miradores del Cañón de 800 m" description="Senderismo en Tolantongo: senderos naturales hasta miradores del cañón de 800 m con vistas panorámicas. Incluido en la entrada general. Hidalgo, México." canonical="/actividades/senderismo/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/actividades/" class="breadcrumbs__link">Actividades</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Senderismo en el Cañón de Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Senderismo y naturaleza</span>
+        <h1 class="hero__title">Senderismo en el Cañón de Tolantongo</h1>
+        <p class="hero__desc">Senderos naturales que ascienden por las paredes del cañón hasta miradores con vistas de 360° sobre el río termal, las albercas y la Sierra Madre Oriental.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/actividades/" class="btn btn--outline btn--lg">Ver todas las actividades</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>800 m</strong><span>Altura máxima</span></div><div class="stat"><strong>Vistas 360°</strong><span>Desde miradores</span></div><div class="stat"><strong>Sin equipo especial</strong><span>Accesible</span></div><div class="stat"><strong>Incluido</strong><span>En la entrada</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cascada-sendero-panoramica.webp" alt="Sendero con vista panorámica en Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem">
+        <div>
+          <h2 style="margin-bottom:1.25rem">Senderos disponibles en el destino</h2>
+          <div style="display:flex;flex-direction:column;gap:1rem">
+            <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">🟢 Sendero principal — Nivel fácil</p>
+              <p style="font-size:.875rem;color:#4A5568;margin:0">Recorre el fondo del cañón junto al río termal. Distancia: ~1.5 km. Sin desnivel significativo. Apto para todas las edades.</p>
+            </div>
+            <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">🟡 Sendero albercas — Nivel moderado</p>
+              <p style="font-size:.875rem;color:#4A5568;margin:0">Asciende por las albercas escalonadas hasta el mirador de la alberca alta. ~300 m de desnivel. Escaleras de roca habilitadas.</p>
+            </div>
+            <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">🔴 Sendero mirador superior — Nivel difícil</p>
+              <p style="font-size:.875rem;color:#4A5568;margin:0">Asciende a los miradores de la parte alta del cañón. ~600 m de desnivel. Requiere buena condición física y calzado de montaña.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 style="margin-bottom:1.25rem">Vistas desde los miradores</h2>
+          <p style="margin-bottom:1rem">Los miradores del Cañón de Tolantongo ofrecen perspectivas únicas que son imposibles de apreciar desde el fondo. Desde la parte alta se puede ver el trazado completo del río termal, el patrón en cascada de las albercas escalonadas y la extensión de la Sierra Madre Oriental.</p>
+          <p>La mejor hora para los miradores es al amanecer (6-8 am) cuando la neblina termal del río crea un efecto visual espectacular desde arriba, o al atardecer cuando la luz cálida ilumina las paredes del cañón.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Planea tu actividad en Tolantongo</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">👟</div><p class="service-card__title">Calzado recomendado</p><p class="service-card__desc">Tenis de suela con agarre para los senderos fáciles. Botas de montaña para el sendero superior.</p><a href="/blog/que-llevar-a-tolantongo/" class="service-card__cta">Qué llevar →</a></div><div class="service-card"><div style="font-size:2.5rem">💧</div><p class="service-card__title">Hidratación</p><p class="service-card__desc">Llevar suficiente agua potable. Los senderos no tienen puntos de agua potable en el recorrido.</p></div><div class="service-card"><div style="font-size:2.5rem">🌅</div><p class="service-card__title">Mejor hora para subir</p><p class="service-card__desc">Amanecer para ver la niebla termal. Evitar subir en las horas de mayor calor (11 am - 3 pm).</p></div><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Incluido en la entrada</p><p class="service-card__desc">Todos los senderos están incluidos en el precio de entrada general sin costo adicional.</p><a href="/precios/" class="btn">Ver tarifas</a></div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería fotográfica</h2>
+        <p>Descubre la belleza de los senderos y miradores en Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--tall">
+          <img src="/media/grutas-tolantongo-cascada-mineral-principal.webp" alt="Cascada mineral principal en el sendero de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-sendero-panoramica.webp" alt="Vista panorámica del sendero junto a la cascada de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-canon-nublado.webp" alt="Pozas termales del cañón de Tolantongo en día nublado" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-vista-general-montana.webp" alt="Vista general de las pozas termales con la montaña de fondo" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Video del sendero</h2>
+      </div>
+      <div class="animate-on-scroll delay-1">
+        <VideoPlayer videoId="cascada-mineral-vegetacion" lang="es" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Preguntas sobre senderismo</h2></div>
+      <div class="faq-list"><details><summary>¿Los senderos están señalizados?</summary><div class="faq-answer">Los senderos principales tienen señalización básica. Para los senderos altos se recomienda ir acompañado y orientarse con el personal del destino.</div></details><details><summary>¿Se puede hacer senderismo con niños?</summary><div class="faq-answer">El sendero principal del fondo del cañón es apto para niños. Los senderos de ascenso a los miradores requieren cierta condición física y no son recomendables para niños pequeños.</div></details><details><summary>¿Hay guías de senderismo disponibles?</summary><div class="faq-answer">El destino no ofrece guías oficiales de senderismo. Los senderos son de libre acceso incluidos en la entrada general.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

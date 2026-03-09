@@ -1,0 +1,16 @@
+{
+  "name": "Equipo Tolantongo",
+  "role": "Equipo Editorial",
+  "bio": "Somos el equipo editorial de Grutas de Tolantongo. Con más de 10 años de experiencia recibiendo visitantes en el Cañón de Tolantongo, Cardonal, Hidalgo, conocemos cada rincón de este destino termal único en México. Nuestras guías están basadas en experiencia directa, datos verificados y retroalimentación constante de miles de viajeros que nos visitan cada año. Nos apasiona compartir la riqueza natural y cultural de la Sierra Gorda hidalguense.",
+  "avatar": "/media/authors/equipo-tolantongo.jpg",
+  "expertise": [
+    "Aguas termales y geología",
+    "Turismo de naturaleza en Hidalgo",
+    "Senderismo y actividades al aire libre",
+    "Hospedaje y servicios turísticos",
+    "Gastronomía regional Hñähñu"
+  ],
+  "social": {
+    "instagram": "https://instagram.com/grutasdetolantongomx"
+  }
+}

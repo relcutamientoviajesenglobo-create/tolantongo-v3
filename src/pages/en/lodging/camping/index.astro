@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import { lodging, faqPage } from '../../../../i18n/schema';
+
+const schema = [
+  lodging('Campground', {
+    name: 'Camping — Grutas de Tolantongo',
+    description: 'Camp inside the Tolantongo thermal canyon from $250 MXN per night.',
+    url: 'https://tolantongo.com.mx/en/lodging/camping/',
+  }),
+  faqPage([
+    { question: 'Are campfires allowed?', answer: 'Campfires are not allowed inside the camping area for safety and natural environment preservation.' },
+    { question: 'Are there parking areas near the campsite?', answer: 'Yes, the monitored parking lot ($60 MXN) is inside the destination and a short distance from the camping area.' },
+    { question: 'Are pets allowed?', answer: 'Pet policies may vary. It is recommended to check directly with the destination before bringing pets.' },
+  ]),
+];
+---
+
+<BaseLayout title="Camping at Grutas de Tolantongo — Camp Inside the Thermal Canyon" description="Camping at Grutas de Tolantongo from $250 MXN per night. Bring your own tent or rent one. Thermal water access included. The most unique destination experience." canonical="/en/lodging/camping/" schema={schema} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/en/" class="breadcrumbs__link">🏠 Home</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/en/lodging/" class="breadcrumbs__link">Lodging</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Camping</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Camping inside the canyon</span>
+        <h1 class="hero__title">Camping at Grutas de Tolantongo</h1>
+        <p class="hero__desc">Camp inside the Tolantongo canyon and enjoy the thermal waters at night. The most affordable option to stay at the destination.</p>
+        <div class="hero__actions">
+          <a href="/en/prices/" class="btn btn--primary btn--lg">See camping prices</a>
+          <a href="/en/lodging/cabins/" class="btn btn--outline btn--lg">See cabins</a>
+        </div>
+
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-pozas-termales-arboles-relax.webp" alt="Camping area with trees near thermal pools" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2>What does the camping area include?</h2>
+        <p>Camping at Tolantongo is one of the most unique experiences in Mexico: sleeping outdoors to the sound of the thermal river.</p>
+      </div>
+      <div class="card-grid card-grid--4">
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><div style="font-size:2rem;margin-bottom:.5rem">💧</div><p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">Thermal access</p><p style="font-size:.875rem;color:#4A5568;margin:0">Unlimited access to grottoes, pools and thermal river during your stay.</p></div>
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><div style="font-size:2rem;margin-bottom:.5rem">🚿</div><p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">Restrooms and water</p><p style="font-size:.875rem;color:#4A5568;margin:0">Restroom facilities and drinking water available in the camping area.</p></div>
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><div style="font-size:2rem;margin-bottom:.5rem">⛺</div><p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">Bring your own or rent</p><p style="font-size:.875rem;color:#4A5568;margin:0">You can bring your own tent ($250 MXN) or rent one with a sleeping bag ($350 MXN).</p></div>
+        <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><div style="font-size:2rem;margin-bottom:.5rem">🌙</div><p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">Nighttime experience</p><p style="font-size:.875rem;color:#4A5568;margin:0">Access to the pools at night when there are no daytime visitors.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Get ready to camp</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🎒</div><p class="service-card__title">What to bring for camping</p><p class="service-card__desc">Sleeping bag or blanket, warm clothing for the night, flashlight, water shoes, cash and snacks.</p><a href="/en/blog/que-llevar-a-tolantongo/" class="service-card__cta">See full list →</a></div><div class="service-card"><div style="font-size:2.5rem">🌡️</div><p class="service-card__title">Nighttime temperature</p><p class="service-card__desc">In winter, nights can drop below 10°C. Bringing warm clothing is essential even though the water is at 36°C.</p></div><div class="service-card"><div style="font-size:2.5rem">💵</div><p class="service-card__title">Cash only</p><p class="service-card__desc">Camping payment is cash only. Withdraw money in Ixmiquilpan before arriving.</p><a href="/en/how-to-get-here/" class="service-card__cta">How to get here →</a></div><div class="service-card"><div style="font-size:2.5rem">📅</div><p class="service-card__title">No advance reservation needed</p><p class="service-card__desc">Camping generally does not require advance reservation. Pay upon arrival based on availability. On holidays, arrive early.</p></div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Photo gallery</h2>
+        <p>The experience of camping in the Tolantongo thermal canyon</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-pozas-termales-vista-superior-puente.webp" alt="Top view of the hanging bridge over the thermal pools at Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Questions about camping</h2></div>
+      <div class="faq-list"><details><summary>Are campfires allowed?</summary><div class="faq-answer">Campfires are not allowed inside the camping area for safety and natural environment preservation.</div></details><details><summary>Are there parking areas near the campsite?</summary><div class="faq-answer">Yes, the monitored parking lot ($60 MXN) is inside the destination and a short distance from the camping area.</div></details><details><summary>Are pets allowed?</summary><div class="faq-answer">Pet policies may vary. It is recommended to check directly with the destination before bringing pets.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

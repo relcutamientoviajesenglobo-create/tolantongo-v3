@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { place, faqPage } from '../../i18n/schema';
+
+const schema = [
+  place({
+    name: 'Cómo Llegar a Grutas de Tolantongo',
+    description: 'Rutas desde CDMX, Pachuca y Querétaro a Grutas de Tolantongo, Hidalgo.',
+    url: 'https://tolantongo.com.mx/como-llegar/',
+  }),
+  faqPage([
+    { question: '¿Hay peajes desde CDMX?', answer: 'Sí, la autopista México-Pachuca tiene casetas (~$80-120 MXN de ida). La carretera libre por Teotihuacán evita peajes pero suma 30-45 minutos.' },
+    { question: '¿Se puede llegar en moto?', answer: 'Sí, la ruta es apta para motocicletas. La carretera de montaña en el tramo final es pavimentada pero tiene curvas pronunciadas.' },
+    { question: '¿Hay transporte público directo desde CDMX?', answer: 'No hay directo. Requiere transbordo en Ixmiquilpan + colectivo. Total: 4-5 horas en transporte público.' },
+  ]),
+];
+---
+
+<BaseLayout title="Cómo Llegar a las Grutas de Tolantongo — Desde CDMX, Pachuca y Querétaro" description="Cómo llegar a Grutas de Tolantongo: 180 km desde CDMX (3 hrs), rutas desde Pachuca y Querétaro, instrucciones autobús y GPS. Coordenadas exactas incluidas." canonical="/como-llegar/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Cómo Llegar</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Instrucciones de acceso</span>
+        <h1 class="hero__title">Cómo llegar a las Grutas de Tolantongo</h1>
+        <p class="hero__desc">A 180 km de Ciudad de México. Carretera completamente pavimentada. Aproximadamente 2.5 a 3 horas desde CDMX.</p>
+        <div class="hero__actions">
+          <a href="https://maps.app.goo.gl/tolantongo" class="btn btn--primary btn--lg">📍 Abrir en Google Maps</a>
+          <a href="/precios/" class="btn btn--outline btn--lg">Ver precios</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>180 km</strong><span>Desde CDMX</span></div><div class="stat"><strong>2.5–3 hrs</strong><span>Tiempo estimado</span></div><div class="stat"><strong>Coord. GPS</strong><span>20.6392, -99.115</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cascada-montana-hidalgo.webp" alt="Carretera de montaña hacia las Grutas de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+    </svg>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Rutas de acceso principales</h2>
+        <p>Tolantongo es accesible desde varias ciudades. Todas las rutas son por carretera pavimentada.</p>
+      </div>
+      <div class="card-grid card-grid--3 animate-on-scroll delay-1">
+        <div class="photo-card" style="cursor:default">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-vista-canon-montanas-hidalgo.webp" alt="Ruta desde Ciudad de México" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Más popular</span>
+            <p class="photo-card__title">Desde Ciudad de México</p>
+            <div style="display:flex;gap:1rem;margin:.5rem 0;flex-wrap:wrap">
+              <span style="font-weight:800;color:#1A3A6B">180 km</span>
+              <span style="color:#4A5568">2.5 – 3 horas</span>
+            </div>
+            <ol style="padding-left:1.25rem;color:#4A5568;font-size:.875rem;display:flex;flex-direction:column;gap:.35rem">
+              <li>Autopista Insurgentes Norte → Pachuca</li>
+              <li>Pachuca → Actopan → Ixmiquilpan</li>
+              <li>Ixmiquilpan → El Alberto → Tolantongo</li>
+            </ol>
+          </div>
+        </div>
+        <div class="photo-card" style="cursor:default">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-cascada-canon-hidalgo.webp" alt="Ruta desde Pachuca" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Desde Pachuca</span>
+            <p class="photo-card__title">Desde Pachuca, Hidalgo</p>
+            <div style="display:flex;gap:1rem;margin:.5rem 0;flex-wrap:wrap">
+              <span style="font-weight:800;color:#1A3A6B">90 km</span>
+              <span style="color:#4A5568">1.5 horas</span>
+            </div>
+            <ol style="padding-left:1.25rem;color:#4A5568;font-size:.875rem;display:flex;flex-direction:column;gap:.35rem">
+              <li>Pachuca → Actopan por carretera libre</li>
+              <li>Actopan → Ixmiquilpan</li>
+              <li>Ixmiquilpan → El Cardonal → Tolantongo</li>
+            </ol>
+          </div>
+        </div>
+        <div class="photo-card" style="cursor:default">
+          <div class="photo-card__img"><img src="/media/grutas-tolantongo-canon-cascada-paisaje.webp" alt="Ruta desde Querétaro" width="400" height="300" loading="lazy"></div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Desde Querétaro</span>
+            <p class="photo-card__title">Desde Querétaro</p>
+            <div style="display:flex;gap:1rem;margin:.5rem 0;flex-wrap:wrap">
+              <span style="font-weight:800;color:#1A3A6B">200 km</span>
+              <span style="color:#4A5568">2.5 – 3 horas</span>
+            </div>
+            <ol style="padding-left:1.25rem;color:#4A5568;font-size:.875rem;display:flex;flex-direction:column;gap:.35rem">
+              <li>Querétaro → autopista a Pachuca (MEX-45)</li>
+              <li>Desviación hacia Ixmiquilpan</li>
+              <li>Ixmiquilpan → El Alberto → Tolantongo</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container animate-on-scroll" style="max-width:860px">
+      <h2 style="margin-bottom:1.5rem">En autobús desde CDMX</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.25rem;background:#F2F2F0;border-radius:16px">
+          <div style="width:32px;height:32px;border-radius:50%;background:#FEC700;display:flex;align-items:center;justify-content:center;font-weight:900;color:#1A3A6B;flex-shrink:0">1</div>
+          <div><p style="font-weight:700;color:#1A3A6B;margin-bottom:.25rem">Terminal Central del Norte (CDMX)</p><p style="color:#4A5568;font-size:.9rem;margin:0">Tomar autobús directo a <strong>Ixmiquilpan</strong> (Autobuses del Valle de Mezquital). Duración: ~2.5 horas.</p></div>
+        </div>
+        <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.25rem;background:#F2F2F0;border-radius:16px">
+          <div style="width:32px;height:32px;border-radius:50%;background:#FEC700;display:flex;align-items:center;justify-content:center;font-weight:900;color:#1A3A6B;flex-shrink:0">2</div>
+          <div><p style="font-weight:700;color:#1A3A6B;margin-bottom:.25rem">Terminal de Ixmiquilpan</p><p style="color:#4A5568;font-size:.9rem;margin:0">Tomar <strong>colectivo o combi</strong> con destino a El Cardonal o directo a Tolantongo. Duración: 40-50 min.</p></div>
+        </div>
+        <div style="display:flex;gap:1.25rem;align-items:flex-start;padding:1.25rem;background:#F2F2F0;border-radius:16px">
+          <div style="width:32px;height:32px;border-radius:50%;background:#FEC700;display:flex;align-items:center;justify-content:center;font-weight:900;color:#1A3A6B;flex-shrink:0">3</div>
+          <div><p style="font-weight:700;color:#1A3A6B;margin-bottom:.25rem">Llegada a Tolantongo</p><p style="color:#4A5568;font-size:.9rem;margin:0">El colectivo te deja en la entrada. No llegar de noche. Sin señal celular en el cañón.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header animate-on-scroll" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Consejos para tu viaje</h2></div>
+      <div class="service-cards animate-on-scroll delay-1"><div class="service-card"><div style="font-size:2.5rem">⛽</div><p class="service-card__title">Carga gasolina en Ixmiquilpan</p><p class="service-card__desc">Última ciudad con gasolineras completas. Sin servicio en el camino ni dentro del destino.</p></div><div class="service-card"><div style="font-size:2.5rem">💵</div><p class="service-card__title">Retira efectivo antes</p><p class="service-card__desc">Solo efectivo. Hay cajeros en Ixmiquilpan. Sin servicio bancario dentro del cañón.</p></div><div class="service-card"><div style="font-size:2.5rem">🌅</div><p class="service-card__title">Llega temprano los fines de semana</p><p class="service-card__desc">Cupo limitado. El destino puede llenarse antes de las 10 am. Recomendable llegar antes de las 8 am.</p></div><div class="service-card"><div style="font-size:2.5rem">📡</div><p class="service-card__title">Señal de celular limitada</p><p class="service-card__desc">Descarga mapas offline antes de salir. Anota el teléfono del destino con anticipación.</p></div></div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Te espera este destino</h2>
+        <p>Un adelanto visual de lo que encontraras al llegar</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-canon-pozas-panoramica-amplia.webp" alt="Vista panoramica del canon con pozas termales" width="800" height="400" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-montana-hidalgo.webp" alt="Cascada en la montana de Hidalgo" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-vista-canon-montanas-hidalgo.webp" alt="Vista del canon y montanas de Hidalgo" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-canon-hidalgo.webp" alt="Cascada en el canon de Hidalgo" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header animate-on-scroll"><h2 id="faq-t">Preguntas sobre cómo llegar</h2></div>
+      <div class="faq-list animate-on-scroll delay-1"><details><summary>¿Hay peajes desde CDMX?</summary><div class="faq-answer">Sí, la autopista México-Pachuca tiene casetas (~$80-120 MXN de ida). La carretera libre por Teotihuacán evita peajes pero suma 30-45 minutos.</div></details><details><summary>¿Se puede llegar en moto?</summary><div class="faq-answer">Sí, la ruta es apta para motocicletas. La carretera de montaña en el tramo final es pavimentada pero tiene curvas pronunciadas.</div></details><details><summary>¿Hay transporte público directo desde CDMX?</summary><div class="faq-answer">No hay directo. Requiere transbordo en Ixmiquilpan + colectivo. Total: 4-5 horas en transporte público.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

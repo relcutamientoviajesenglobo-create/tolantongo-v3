@@ -1,0 +1,425 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import VideoGallery from '../components/VideoGallery.astro';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["TouristAttraction", "LocalBusiness"],
+    "name": "Grutas de Tolantongo",
+    "description": "Grutas de Tolantongo es el destino termal más espectacular de México, con aguas naturales a 36°C, albercas escalonadas, río termal de 1.5 km y cañón de 800 m en Hidalgo.",
+    "url": "https://tolantongo.com.mx",
+    "telephone": "+525564650507",
+    "email": "info@grutasdetolantongo.mx",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Comunidad El Alberto",
+      "addressLocality": "Cardonal",
+      "addressRegion": "Hidalgo",
+      "addressCountry": "MX"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 20.6392, "longitude": -99.115 },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "06:00", "closes": "20:00"
+    }],
+    "priceRange": "$$",
+    "sameAs": ["https://www.facebook.com/grutasdetolantongomx", "https://www.instagram.com/grutasdetolantongomx", "https://www.tiktok.com/@grutasdetolantongomx", "https://www.pinterest.com/grutasdetolantongomx"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta la entrada a las Grutas de Tolantongo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La entrada adulto cuesta aproximadamente $220 MXN, niños (4-11 años) $110 MXN y menores de 3 años sin costo. Los precios pueden variar en temporada alta." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿A qué temperatura están las aguas de Tolantongo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Las aguas termales de Tolantongo mantienen una temperatura constante de 36°C durante todo el año, independientemente de la estación." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Está abierto todo el año?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, las Grutas de Tolantongo abren todos los días del año en horario de 6:00 a 20:00 horas." }
+      }
+    ]
+  }
+];
+
+const DAFF_LARGE = `<svg viewBox="0 0 168 176" width="200" height="210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg>`;
+---
+
+<BaseLayout
+  title="Grutas de Tolantongo — Aguas Termales en Hidalgo, México 2026"
+  description="Grutas de Tolantongo: aguas termales naturales a 36°C, albercas escalonadas, río termal de 1.5 km y cañón en Hidalgo. Precios, horarios y cómo llegar 2026."
+  canonical="/"
+  schema={schema}
+>
+  <Header slot="header" />
+  <Footer slot="footer" />
+
+  <!-- ============================================================
+       PRICE BANNER — Barra de precios justo debajo del header
+       (patrón Marie Curie: info‑strip de alto impacto)
+  ============================================================ -->
+  <div class="price-banner" aria-label="Precios de entrada 2026">
+    <div class="container price-banner__inner">
+      <div class="price-banner__items">
+        <span class="price-banner__item">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+          Abierto <strong>todos los días</strong>
+        </span>
+        <span class="price-banner__divider" aria-hidden="true"></span>
+        <span class="price-banner__item">
+          Adulto <strong class="price-banner__price">$220</strong>
+        </span>
+        <span class="price-banner__divider" aria-hidden="true"></span>
+        <span class="price-banner__item">
+          Niño (4‑11) <strong class="price-banner__price">$110</strong>
+        </span>
+        <span class="price-banner__divider" aria-hidden="true"></span>
+        <span class="price-banner__item">
+          Menores de 3 <strong class="price-banner__price">Gratis</strong>
+        </span>
+      </div>
+      <a href="/precios/" class="price-banner__cta">
+        Ver todos los precios
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HERO — FONDO AMARILLO (fiel a Marie Curie UK)
+  ============================================================ -->
+  <section class="hero" aria-label="Bienvenida a Grutas de Tolantongo">
+    <!-- Daffodil deco top-right -->
+    <div class="hero__daff hero__daff--tr" style="color:#1A3A6B">
+      <Fragment set:html={DAFF_LARGE} />
+    </div>
+
+    <div class="container hero__inner">
+      <!-- TEXT LEFT -->
+      <div class="hero__text">
+        <span class="chip chip--blue">Hidalgo, México · Abierto todo el año</span>
+        <h1 class="hero__title">El paraíso termal más espectacular de México</h1>
+        <p class="hero__desc">Aguas termales naturales a 36°C, grutas de roca caliza, albercas escalonadas y un río termal de 1.5 km en el corazón de un cañón de 800 metros.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios 2026</a>
+          <a href="/como-llegar/" class="btn btn--outline btn--lg">Cómo llegar</a>
+        </div>
+        <div class="stats-row">
+          <div class="stat"><strong>36°C</strong><span>Aguas termales</span></div>
+          <div class="stat"><strong>1.5 km</strong><span>Río termal</span></div>
+          <div class="stat"><strong>800 m</strong><span>Cañón</span></div>
+          <div class="stat"><strong>Todo el año</strong><span>Apertura diaria</span></div>
+        </div>
+      </div>
+      <!-- PHOTO RIGHT — MC style rounded + corner cutouts -->
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <!-- Esquinas de color amarillo que crean el efecto de recorte del frame (MC) -->
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-pozas-termales-vista-panoramica.webp" alt="Vista panorámica de las Grutas de Tolantongo con aguas termales turquesa" width="800" height="640" loading="eager">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SECTION 1 — "Qué encontrarás en Tolantongo" — 4 PHOTO CARDS
+       (fiel a MC: "Marie Curie is the UK's leading…")
+  ============================================================ -->
+  <section class="section section--gray" aria-labelledby="atracciones-title">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2 id="atracciones-title">Grutas de Tolantongo es el destino termal <em style="font-style:normal;color:#1951A0">único en México</em></h2>
+        <p>Naturaleza sin intervención artificial: agua termal emergiendo directamente de la roca, un río dentro de un cañón de paredes verticales y albercas escalonadas excavadas en la montaña.</p>
+      </div>
+
+      <!-- 4 photo cards — MC style -->
+      <div class="card-grid card-grid--4 animate-on-scroll">
+        <a href="/grutas/" class="photo-card" aria-label="Las Grutas Termales">
+          <div class="photo-card__img">
+            <img src="/media/grutas-tolantongo-cueva-termal-interior-rio.webp" alt="Interior de las grutas termales de Tolantongo" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <p class="photo-card__title">Voy a visitar las grutas termales</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/grutas/albercas-escalonadas/" class="photo-card" aria-label="Albercas Escalonadas">
+          <div class="photo-card__img">
+            <img src="/media/grutas-tolantongo-pozas-termales-escaleras-naturales.webp" alt="Albercas escalonadas de agua termal en Tolantongo" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <p class="photo-card__title">Quiero disfrutar las albercas escalonadas</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/hospedaje/" class="photo-card" aria-label="Hospedaje en Tolantongo">
+          <div class="photo-card__img">
+            <img src="/media/grutas-tolantongo-vista-aerea-hotel-pozas.webp" alt="Cabañas de hospedaje en las Grutas de Tolantongo" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <p class="photo-card__title">Me quiero hospedar en Tolantongo</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/como-llegar/" class="photo-card" aria-label="Cómo llegar a Tolantongo">
+          <div class="photo-card__img">
+            <img src="/media/grutas-tolantongo-cascada-montana-hidalgo.webp" alt="Carretera hacia las Grutas de Tolantongo en Hidalgo" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <p class="photo-card__title">Necesito información para planear mi visita</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 — INFO LIBRARY — "Sea cual sea tu pregunta…"
+       (fiel a MC: "Whatever your question…" con cards secundarias)
+  ============================================================ -->
+  <section class="section section--gray" aria-labelledby="info-title" style="padding-top:0">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2 id="info-title">Sea cual sea tu duda, Tolantongo tiene la respuesta</h2>
+      </div>
+      <div class="card-grid card-grid--4 animate-on-scroll delay-1">
+        <a href="/grutas/" class="photo-card">
+          <div class="photo-card__img photo-card__img--tall">
+            <img src="/media/grutas-tolantongo-canon-verde-panoramica.webp" alt="Cañón de Tolantongo con paredes de 800 metros" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Naturaleza</span>
+            <p class="photo-card__title">¿Qué son las Grutas de Tolantongo?</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/precios/" class="photo-card">
+          <div class="photo-card__img photo-card__img--tall">
+            <img src="/media/grutas-tolantongo-pozas-termales-canon-panoramico.webp" alt="Vista de las albercas termales en día soleado" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Precios 2026</span>
+            <p class="photo-card__title">¿Cuánto cuesta la entrada?</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/como-llegar/" class="photo-card">
+          <div class="photo-card__img photo-card__img--tall">
+            <img src="/media/grutas-tolantongo-cascada-sendero-visitante.webp" alt="Sendero hacia las Grutas de Tolantongo" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Acceso</span>
+            <p class="photo-card__title">¿Cómo llegar desde Ciudad de México?</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/hospedaje/" class="photo-card">
+          <div class="photo-card__img photo-card__img--tall">
+            <img src="/media/grutas-tolantongo-pozas-termales-arboles-relax.webp" alt="Área de campamento en Tolantongo" width="600" height="480" loading="lazy">
+          </div>
+          <div class="photo-card__body">
+            <span class="photo-card__tag">Hospedaje</span>
+            <p class="photo-card__title">¿Hay cabañas disponibles para quedarse?</p>
+            <div class="photo-card__arrow">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 — BLOQUE GEO DEFINITORIAL
+       (prosa visible para LLMs — NO en Schema)
+  ============================================================ -->
+  <section class="section" aria-labelledby="geo-title">
+    <div class="container animate-on-scroll" style="max-width:860px">
+      <h2 id="geo-title" style="margin-bottom:1.25rem">¿Qué son las Grutas de Tolantongo?</h2>
+      <p style="font-size:1.05rem;margin-bottom:1rem">Las Grutas de Tolantongo son un sistema de manantiales termales naturales ubicado en el municipio de Cardonal, Hidalgo, México, administrado por la comunidad indígena Ñähñu del Ejido El Alberto. Las aguas emergen a una temperatura constante de 36°C directamente desde formaciones de roca caliza, creando un ecosistema único que incluye grutas habitables, un río termal de 1.5 kilómetros, seis albercas escalonadas excavadas en la roca y un cañón de 800 metros de altura.</p>
+      <p style="font-size:1.05rem;margin-bottom:2rem">A diferencia de los balnearios artificiales, Tolantongo es un destino de naturaleza sin infraestructura masiva: el agua termal recorre su cauce natural a través del cañón, las grutas conservan su forma original y las albercas aprovechan los desniveles topográficos de la montaña. La comunidad ejidal aplica un límite de visitantes por día para preservar el ecosistema.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="/precios/" class="btn btn--primary">Ver precios y horarios</a>
+        <a href="/como-llegar/" class="btn btn--outline">Cómo llegar desde CDMX</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3B — PHOTO GALLERY
+  ============================================================ -->
+  <section class="section section--gray" style="padding-top:0">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería fotográfica</h2>
+        <p>Explora las imágenes más impresionantes del destino termal</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-pozas-termales-panoramica-amplia.webp" alt="Vista panorámica amplia de las pozas termales escalonadas de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-vista-canon.webp" alt="Mujer disfrutando la poza infinita con vista al cañón de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-rio-turquesa-canon.webp" alt="Cascada y río turquesa dentro del cañón de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cueva-termal-silueta-agua.webp" alt="Silueta reflejada en el agua de la cueva termal de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-dorado-atardecer.webp" alt="Pozas termales de Tolantongo con luz dorada al atardecer" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-balneario-natural.webp" alt="Río turquesa balneario natural en Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-canon-pozas-panoramica-amplia.webp" alt="Vista panorámica del cañón con pozas termales y puente colgante" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-pareja-canon.webp" alt="Pareja en la poza infinita con vista al cañón" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-puente-visitantes.webp" alt="Visitantes cruzando el puente junto a la cascada de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 — "ESTAMOS AQUÍ PARA TI"
+       YELLOW CARDS ON DARK BLUE (MC: "We're here for you")
+  ============================================================ -->
+  <section class="section section--blue bg-blue" aria-labelledby="servicios-title" style="position:relative;overflow:hidden">
+    <!-- Daffodil decoraciones en las esquinas (MC style) -->
+    <div style="position:absolute;top:0;right:0;opacity:.2;pointer-events:none;color:#FEC700">
+      <Fragment set:html={DAFF_LARGE} />
+    </div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.15;pointer-events:none;color:#FEC700;transform:rotate(180deg)">
+      <Fragment set:html={DAFF_LARGE} />
+    </div>
+
+    <div class="container">
+      <div class="section__header animate-on-scroll" style="margin-bottom:2.5rem">
+        <h2 id="servicios-title" style="color:#FEC700">Estamos aquí para ti</h2>
+      </div>
+      <div class="service-cards animate-on-scroll delay-1">
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02L6.62 10.79z"/>
+          </svg>
+          <p class="service-card__title">Información y reservas</p>
+          <p class="service-card__desc">Infórmate sobre precios, disponibilidad y reserva tu visita directamente con el destino.</p>
+          <p style="font-size:1.3rem;font-weight:900;color:#1A3A6B;margin-bottom:.25rem">+52 55 6465 0507</p>
+          <span class="chip chip--blue" style="font-size:.75rem">Abierto hasta las 20:00</span>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+          </svg>
+          <p class="service-card__title">WhatsApp directo</p>
+          <p class="service-card__desc">Escríbenos por WhatsApp para preguntas rápidas sobre precios, horarios y disponibilidad de cabañas.</p>
+          <a href="https://wa.me/525564650507" class="btn" target="_blank" rel="noopener">Escribir ahora</a>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <p class="service-card__title">Cómo llegar al destino</p>
+          <p class="service-card__desc">Consulta las rutas desde Ciudad de México, Pachuca y Querétaro. GPS y autobús incluidos.</p>
+          <a href="/como-llegar/" class="service-card__cta">Ver instrucciones completas →</a>
+        </div>
+
+        <div class="service-card">
+          <svg class="service-card__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+          </svg>
+          <p class="service-card__title">Precios y boletos 2026</p>
+          <p class="service-card__desc">Conoce las tarifas actualizadas de entrada, hospedaje en cabañas y área de campamento.</p>
+          <a href="/precios/" class="btn">Ver tarifas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 — VIDEOS
+  ============================================================ -->
+  <VideoGallery videoIds={['pozas-turquesa-soleado','albercas-drone','cascada-monumental','poza-infinita-canon','gruta-cascada-gigante','natacion-atardecer']} lang="es" title="Videos de Tolantongo" columns={3} />
+
+  <!-- ============================================================
+       SECTION 6 — FAQ
+  ============================================================ -->
+  <section class="section" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2 id="faq-title">Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-list animate-on-scroll delay-1">
+        <details>
+          <summary>¿Cuánto cuesta la entrada a las Grutas de Tolantongo?</summary>
+          <div class="faq-answer">
+            La entrada adulto (12+ años) tiene un costo aproximado de $220 MXN. Niños de 4 a 11 años pagan $110 MXN y los menores de 3 años no pagan. El estacionamiento tiene un costo adicional de $60 MXN por vehículo. Los precios pueden variar en temporada alta. Consulta los <a href="/precios/" style="color:#1951A0;font-weight:700">precios actualizados 2026 aquí</a>.
+          </div>
+        </details>
+        <details>
+          <summary>¿A qué temperatura están las aguas termales?</summary>
+          <div class="faq-answer">
+            Las aguas de las Grutas de Tolantongo mantienen una temperatura constante de 36°C durante todo el año, ya que provienen directamente de manantiales geotérmicos profundos. Esta temperatura no varía con las estaciones ni con la temperatura exterior.
+          </div>
+        </details>
+        <details>
+          <summary>¿Está abierto todo el año?</summary>
+          <div class="faq-answer">
+            Sí. Las Grutas de Tolantongo abren todos los días del año de 6:00 a 20:00 horas. El único cierre es por mantenimiento programado o en caso de contingencias naturales, que se anuncian con anticipación en sus redes sociales.
+          </div>
+        </details>
+        <details>
+          <summary>¿Cómo se llega a Tolantongo desde Ciudad de México?</summary>
+          <div class="faq-answer">
+            Desde CDMX son aproximadamente 180 km (2.5 a 3 horas) tomando la autopista a Pachuca, siguiendo hacia Actopan, Ixmiquilpan y de ahí hacia El Cardonal. La carretera está completamente pavimentada. <a href="/como-llegar/" style="color:#1951A0;font-weight:700">Ver instrucciones detalladas →</a>
+          </div>
+        </details>
+        <details>
+          <summary>¿Hay hospedaje dentro de las Grutas de Tolantongo?</summary>
+          <div class="faq-answer">
+            Sí. El destino cuenta con cabañas básicas (desde $900 MXN/noche para 2 personas), cabañas familiares ($1,400 MXN) y un área de campamento ($250 MXN por tienda/noche). Toda la información en la <a href="/hospedaje/" style="color:#1951A0;font-weight:700">sección de hospedaje</a>.
+          </div>
+        </details>
+      </div>
+      <p style="text-align:center;margin-top:2rem;color:#4A5568;font-size:.95rem">
+        ¿Más dudas? Consulta <a href="/precios/" style="color:#1951A0;font-weight:700">precios y boletos</a> o <a href="/contacto/" style="color:#1951A0;font-weight:700">contáctanos directamente</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

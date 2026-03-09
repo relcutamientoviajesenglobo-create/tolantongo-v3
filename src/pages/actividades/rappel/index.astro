@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { touristAttraction, faqPage } from '../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Rappel en Grutas de Tolantongo',
+    description: 'Aventura de rappel y descenso en el cañón de Tolantongo, Hidalgo.',
+    url: 'https://tolantongo.com.mx/actividades/rappel/',
+  }),
+  faqPage([
+    { question: '¿Se necesita experiencia previa para el rappel?', answer: 'Los operadores locales ofrecen actividades para principiantes con briefing de seguridad incluido. No se requiere experiencia previa.' },
+    { question: '¿Qué equipo se necesita llevar?', answer: 'El equipo de seguridad (arnés, casco, cuerdas) es proporcionado por los operadores. Solo necesitas ropa cómoda y calzado cerrado.' },
+    { question: '¿Las actividades de aventura están disponibles todos los días?', answer: 'No necesariamente. Los operadores trabajan principalmente fines de semana y puentes. En temporada alta hay más oferta. Consultar al llegar.' },
+  ]),
+];
+---
+
+<BaseLayout title="Rappel en Grutas de Tolantongo — Aventura en el Cañón de Hidalgo" description="Rappel y aventura en el Cañón de Tolantongo: descenso en roca caliza, tirolesa y actividades extremas en Hidalgo. Operadores locales en el destino." canonical="/actividades/rappel/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/actividades/" class="breadcrumbs__link">Actividades</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Rappel y Aventura en el Cañón de Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Aventura extrema</span>
+        <h1 class="hero__title">Rappel y Aventura en el Cañón de Tolantongo</h1>
+        <p class="hero__desc">Actividades de aventura dentro de uno de los cañones más espectaculares de México. Rappel en paredes de roca caliza con vistas al río termal.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/actividades/" class="btn btn--outline btn--lg">Ver todas las actividades</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>800 m</strong><span>Paredes del cañón</span></div><div class="stat"><strong>Roca caliza</strong><span>Ideal para rappel</span></div><div class="stat"><strong>Vista termal</strong><span>Única en México</span></div><div class="stat"><strong>Operadores</strong><span>In situ</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cascada-roca-mineral-vertical.webp" alt="Formación rocosa vertical ideal para rappel en Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div style="max-width:860px;margin:0 auto">
+        <h2 style="margin-bottom:1.25rem">Aventura en un escenario único</h2>
+        <p style="margin-bottom:1rem">El Cañón de Tolantongo, con sus paredes de roca caliza de hasta 800 metros, es uno de los escenarios de aventura más espectaculares del centro de México. El rappel en este entorno combina la adrenalina del descenso con la vista única de un río termal activo en el fondo del cañón.</p>
+        <p style="margin-bottom:1rem">Las actividades de aventura en el destino son operadas por grupos locales certificados de la comunidad Ñähñu. Consultar disponibilidad directamente en el destino al llegar, ya que los operadores trabajan en días específicos según demanda.</p>
+        <div style="background:#FEC700;border-radius:16px;padding:1.5rem 2rem;display:flex;align-items:flex-start;gap:1rem;margin-top:1.5rem">
+          <span style="font-size:1.5rem;flex-shrink:0">⚠️</span>
+          <div><p style="font-weight:800;color:#1A3A6B;margin-bottom:.35rem">Actividades con costo adicional</p><p style="color:#1A3A6B;font-size:.9rem;margin:0">Las actividades de aventura (rappel, tirolesa) tienen costo adicional al precio de entrada general. Pago en efectivo directamente con los operadores en el destino.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Planea tu actividad en Tolantongo</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🪢</div><p class="service-card__title">Rappel</p><p class="service-card__desc">Descenso en roca caliza con vistas al río termal. Equipo proporcionado por operadores locales.</p></div><div class="service-card"><div style="font-size:2.5rem">🏹</div><p class="service-card__title">Tirolesa</p><p class="service-card__desc">Tirolesa sobre el cañón disponible según temporada. Consultar disponibilidad al llegar.</p></div><div class="service-card"><div style="font-size:2.5rem">🥾</div><p class="service-card__title">Senderismo aventura</p><p class="service-card__desc">Senderos de dificultad alta hacia la parte superior del cañón para visitantes experimentados.</p><a href="/actividades/senderismo/" class="service-card__cta">Ver senderismo →</a></div><div class="service-card"><div style="font-size:2.5rem">💵</div><p class="service-card__title">Pago en efectivo</p><p class="service-card__desc">Todas las actividades de aventura se pagan en efectivo directamente con los operadores. Llevar efectivo suficiente.</p><a href="/como-llegar/" class="service-card__cta">Ver consejos →</a></div></div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>El canon de aventura</h2>
+        <p>Explora las formaciones verticales donde se practica rappel</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-cascada-visitante-poza.webp" alt="Visitante junto a cascada y poza natural" width="800" height="400" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-roca-mineral-vertical.webp" alt="Cascada en roca mineral vertical" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-sendero-panoramica.webp" alt="Sendero panoramico junto a cascada" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-canon-cascada-paisaje.webp" alt="Paisaje del canon con cascada" width="400" height="300" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:16px">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Preguntas sobre rappel</h2></div>
+      <div class="faq-list"><details><summary>¿Se necesita experiencia previa para el rappel?</summary><div class="faq-answer">Los operadores locales ofrecen actividades para principiantes con briefing de seguridad incluido. No se requiere experiencia previa.</div></details><details><summary>¿Qué equipo se necesita llevar?</summary><div class="faq-answer">El equipo de seguridad (arnés, casco, cuerdas) es proporcionado por los operadores. Solo necesitas ropa cómoda y calzado cerrado.</div></details><details><summary>¿Las actividades de aventura están disponibles todos los días?</summary><div class="faq-answer">No necesariamente. Los operadores trabajan principalmente fines de semana y puentes. En temporada alta hay más oferta. Consultar al llegar.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

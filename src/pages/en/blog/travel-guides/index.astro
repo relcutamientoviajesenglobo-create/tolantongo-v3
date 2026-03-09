@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import BlogCard from '../../../../components/blog/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => p.data.silo === 'guias-viaje' && p.data.lang === 'en')
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Travel Guides to Tolantongo',
+  description: 'Practical guides to plan your visit to Grutas de Tolantongo: what to bring, how to get there, prices, best time to visit, and tips.',
+  url: 'https://tolantongo.com.mx/en/blog/travel-guides/',
+};
+
+const breadcrumbs = [
+  { label: 'Blog', href: '/en/blog/' },
+  { label: 'Travel Guides' },
+];
+---
+
+<BaseLayout title="Travel Guides to Tolantongo — Tips & Planning 2026" description="Everything to plan your visit to Tolantongo: what to bring, how to get there, updated prices, best time to visit, safety, and practical tips from real travelers." canonical="/en/blog/travel-guides/" schema={schema} breadcrumbs={breadcrumbs} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Topic: Travel Guides</span>
+        <h1 class="hero__title">Travel Guides to Tolantongo</h1>
+        <p class="hero__desc">Practical, up-to-date information based on real experience to help you plan the perfect visit to Grutas de Tolantongo.</p>
+        <div class="hero__actions">
+          <a href="/en/prices/" class="btn btn--primary btn--lg">See 2026 Prices</a>
+          <a href="/en/how-to-get-here/" class="btn btn--outline btn--lg">How to Get Here</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cascada-termal-visitante.webp" alt="Travelers at Grutas de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Travel Guides & Articles</h2>
+        <p>All the information you need to prepare your visit to Tolantongo, written by those who know every corner of the destination.</p>
+      </div>
+      {posts.length > 0 ? (
+        <div class="card-grid card-grid--3 animate-on-scroll delay-1">
+          {posts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug.replace(/^en-/, '')}
+              image={post.data.image}
+              imageAlt={post.data.imageAlt}
+              author={post.data.author}
+              publishDate={post.data.publishDate}
+              readingTime={post.data.readingTime}
+              category={post.data.category}
+              lang="en"
+            />
+          ))}
+        </div>
+      ) : (
+        <p style="text-align:center;color:var(--mc-text-muted);padding:3rem 0">New travel guides coming soon. Stay tuned!</p>
+      )}
+    </div>
+  </section>
+
+  <!-- Contextual bridges to other silos -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Explore More about Tolantongo</h2>
+      </div>
+      <div class="card-grid card-grid--3">
+        <a href="/en/blog/thermal-grottoes/" class="service-card">
+          <div class="service-card__icon">{'\u{1F30A}'}</div>
+          <h3 class="service-card__title">Thermal Grottoes</h3>
+          <p class="service-card__desc">Discover the geology, temperatures, and natural wonders of the canyon.</p>
+        </a>
+        <a href="/en/blog/adventure-activities/" class="service-card">
+          <div class="service-card__icon">{'\u{1F97E}'}</div>
+          <h3 class="service-card__title">Activities & Adventure</h3>
+          <p class="service-card__desc">Hiking, rappelling, photography, and thermal swimming.</p>
+        </a>
+        <a href="/en/blog/lodging-camping/" class="service-card">
+          <div class="service-card__icon">{'\u{1F3D5}\uFE0F'}</div>
+          <h3 class="service-card__title">Lodging & Camping</h3>
+          <p class="service-card__desc">Cabins, campsite, and accommodation options.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

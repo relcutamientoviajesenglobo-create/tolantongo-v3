@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import VideoGallery from '../../../components/VideoGallery.astro';
+import { touristAttraction, faqPage } from '../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Natación Termal — Grutas de Tolantongo',
+    description: 'Nada en aguas termales a 36°C en las pozas escalonadas y río termal de Tolantongo.',
+    url: 'https://tolantongo.com.mx/actividades/natacion-termal/',
+  }),
+  faqPage([
+    { question: '¿Hay límite de profundidad para la natación?', answer: 'En las grutas el canal es de 40-80 cm. En las albercas varía entre 30 cm y 1.2 m. En el río puede llegar a 1.5 m en algunos tramos.' },
+    { question: '¿Se puede nadar en invierno?', answer: 'Sí. La temperatura constante de 36°C hace que nadar en invierno sea especialmente agradable. En días fríos el contraste de temperatura crea niebla sobre el agua, un espectáculo visual único.' },
+    { question: '¿Es apto para no nadadores?', answer: 'Sí. La mayoría de las zonas tienen profundidad manejable. Las grutas y el comienzo del río son perfectas para quienes no saben nadar. Siempre ir acompañado.' },
+  ]),
+];
+---
+
+<BaseLayout title="Natación Termal en Grutas de Tolantongo — Aguas a 36°C en Roca Caliza" description="Natación termal en Tolantongo: baño en aguas geotérmicas a 36°C dentro de grutas, albercas y río termal. La experiencia única de las Grutas de Tolantongo en Hidalgo." canonical="/actividades/natacion-termal/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/actividades/" class="breadcrumbs__link">Actividades</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Natación Termal en Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Actividad principal</span>
+        <h1 class="hero__title">Natación Termal en Tolantongo</h1>
+        <p class="hero__desc">Baño en aguas geotérmicas naturales a 36°C dentro de grutas de roca caliza, albercas escalonadas y el río termal de 1.5 km. La actividad central de las Grutas de Tolantongo.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/actividades/" class="btn btn--outline btn--lg">Ver todas las actividades</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>36°C</strong><span>Agua todo el año</span></div><div class="stat"><strong>3 zonas</strong><span>Grutas, albercas, río</span></div><div class="stat"><strong>1.5 km</strong><span>Río navegable</span></div><div class="stat"><strong>Para todos</strong><span>Adultos y niños</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-poza-termal-cascada-mujer.webp" alt="Natación termal en poza con cascada en Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2>Zonas de natación disponibles</h2>
+        <p>El destino ofrece tres zonas diferenciadas para la natación termal, cada una con características únicas.</p>
+      </div>
+      <div class="card-grid card-grid--3">
+        <a href="/grutas/" class="photo-card"><div class="photo-card__img">🌊</div><div class="photo-card__body"><span class="photo-card__tag">Más popular</span><p class="photo-card__title">Grutas Termales</p><p style="font-size:.875rem;color:#4A5568">Canal de agua a 36°C dentro de cuevas naturales de roca caliza. La experiencia más única.</p><div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="/grutas/albercas-escalonadas/" class="photo-card"><div class="photo-card__img">💧</div><div class="photo-card__body"><span class="photo-card__tag">Vistas panorámicas</span><p class="photo-card__title">Albercas Escalonadas</p><p style="font-size:.875rem;color:#4A5568">6 piscinas en cascada de roca natural. Profundidad variada, aptas para todas las edades.</p><div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+        <a href="/grutas/rio/" class="photo-card"><div class="photo-card__img">🏞️</div><div class="photo-card__body"><span class="photo-card__tag">Único en México</span><p class="photo-card__title">Río Termal</p><p style="font-size:.875rem;color:#4A5568">1.5 km de río termal natural dentro del cañón. Tramos abiertos y subterráneos.</p><div class="photo-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></div></a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <h2 style="margin-bottom:1.25rem">¿Por qué la natación termal de Tolantongo es diferente?</h2>
+      <p style="margin-bottom:1rem">La natación termal en Tolantongo no ocurre en una piscina construida: ocurre en formaciones de roca caliza natural, dentro de cuevas con techos de hasta 15 metros y en un río que fluye por el interior de un cañón de 800 metros. La temperatura constante de 36°C durante todo el año permite disfrutar el baño en cualquier estación.</p>
+      <p style="margin-bottom:1rem">El efecto termal del agua a 36°C tiene propiedades relajantes documentadas: dilata los vasos sanguíneos, reduce la tensión muscular y genera una sensación de bienestar sostenida. El alto contenido mineral del agua (carbonatos, bicarbonatos y sulfatos) añade propiedades adicionales al baño.</p>
+      <p>A diferencia de los balnearios convencionales que calientan agua artificialmente, en Tolantongo el calor es 100% geotérmico: proviene del interior de la tierra sin ninguna intervención artificial.</p>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Planea tu actividad en Tolantongo</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Precios de entrada 2026</p><p class="service-card__desc">$220 MXN adulto, $110 MXN niño. Incluye acceso a las 3 zonas de natación.</p><a href="/precios/" class="btn">Ver tarifas</a></div><div class="service-card"><div style="font-size:2.5rem">🕐</div><p class="service-card__title">Horario</p><p class="service-card__desc">Abierto todos los días de 6:00 a 20:00 horas. Los horarios de menor afluencia son entre semana por la mañana.</p></div><div class="service-card"><div style="font-size:2.5rem">👟</div><p class="service-card__title">Qué llevar</p><p class="service-card__desc">Traje de baño, zapatos acuáticos, toalla y bloqueador biodegradable.</p><a href="/blog/que-llevar-a-tolantongo/" class="service-card__cta">Ver lista completa →</a></div><div class="service-card"><div style="font-size:2.5rem">🏕️</div><p class="service-card__title">Quédate a dormir</p><p class="service-card__desc">Hospedarse en el destino permite nadar de noche sin otros visitantes.</p><a href="/hospedaje/" class="service-card__cta">Ver hospedaje →</a></div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería fotográfica</h2>
+        <p>Descubre la belleza de la natación termal en Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-poza-termal-mujer-terrazas.webp" alt="Mujer disfrutando las terrazas termales de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-mujer-blanco.webp" alt="Mujer con traje blanco en las pozas termales de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-pozas-termales-mujer-pareo-rosa.webp" alt="Mujer con pareo rosa en las pozas termales naturales" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-vista-canon.webp" alt="Mujer contemplando la vista del cañón desde la poza infinita" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-infinita-mujer-paisaje.webp" alt="Mujer admirando el paisaje desde la poza infinita de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['poza-infinita-canon','natacion-atardecer','poza-cenital']} lang="es" title="Videos de natación termal" columns={3} />
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Preguntas sobre natacion termal</h2></div>
+      <div class="faq-list"><details><summary>¿Hay límite de profundidad para la natación?</summary><div class="faq-answer">En las grutas el canal es de 40-80 cm. En las albercas varía entre 30 cm y 1.2 m. En el río puede llegar a 1.5 m en algunos tramos.</div></details><details><summary>¿Se puede nadar en invierno?</summary><div class="faq-answer">Sí. La temperatura constante de 36°C hace que nadar en invierno sea especialmente agradable. En días fríos el contraste de temperatura crea niebla sobre el agua, un espectáculo visual único.</div></details><details><summary>¿Es apto para no nadadores?</summary><div class="faq-answer">Sí. La mayoría de las zonas tienen profundidad manejable. Las grutas y el comienzo del río son perfectas para quienes no saben nadar. Siempre ir acompañado.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

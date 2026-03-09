@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import VideoGallery from '../../../components/VideoGallery.astro';
+import { touristAttraction, faqPage } from '../../../i18n/schema';
+
+const schema = [
+  touristAttraction({
+    name: 'Río Termal — Grutas de Tolantongo',
+    description: 'Río termal de 1.5 km a 36°C que atraviesa el cañón de Tolantongo en Hidalgo.',
+    url: 'https://tolantongo.com.mx/grutas/rio/',
+  }),
+  faqPage([
+    { question: '¿Se puede nadar en el río Tolantongo?', answer: 'Sí, el río es navegable y nadable en todo su recorrido. La profundidad varía pero la mayoría del trayecto permite caminar o nadar cómodamente.' },
+    { question: '¿Hay corriente peligrosa en el río?', answer: 'La corriente es suave en la mayoría del recorrido. En temporada de lluvias puede aumentar. Siempre respetar las señalizaciones del destino sobre zonas habilitadas.' },
+    { question: '¿El acceso al río está incluido en la entrada?', answer: 'Sí. El recorrido por el río forma parte del acceso general al destino. No hay costo adicional.' },
+  ]),
+];
+---
+
+<BaseLayout title="Río Tolantongo — Río Termal de 1.5 km a 36°C en Hidalgo" description="El Río Tolantongo es un río termal único: 1.5 km de agua a 36°C dentro de un cañón de 800 metros con tramos subterráneos. Incluido en la entrada general." canonical="/grutas/rio/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><a href="/grutas/" class="breadcrumbs__link">Grutas y Albercas</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Río Tolantongo</span></li></ol></div></div>
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Único en México</span>
+        <h1 class="hero__title">Río Tolantongo — El río termal subterráneo</h1>
+        <p class="hero__desc">Un río de agua termal a 36°C que fluye 1.5 kilómetros dentro de un cañón de paredes verticales. La experiencia más singular del destino.</p>
+        <div class="hero__actions">
+          <a href="/precios/" class="btn btn--primary btn--lg">Ver precios de entrada</a>
+          <a href="/grutas/" class="btn btn--outline btn--lg">Ver las grutas</a>
+        </div>
+        <div class="stats-row"><div class="stat"><strong>1.5 km</strong><span>Recorrido termal</span></div><div class="stat"><strong>36°C</strong><span>Agua constante</span></div><div class="stat"><strong>Subterráneo</strong><span>Dentro del cañón</span></div><div class="stat"><strong>Natural</strong><span>Sin alteraciones</span></div></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-rio-turquesa-rocas-naturales.webp" alt="Río termal turquesa de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start">
+        <div>
+          <h2 style="margin-bottom:1.25rem">El río termal más singular de México</h2>
+          <p style="margin-bottom:1rem">El Río Tolantongo es un cuerpo de agua termal que fluye de forma natural por el interior del cañón durante aproximadamente 1.5 kilómetros. A diferencia de los ríos convencionales, su agua proviene íntegramente de los manantiales geotérmicos del cañón, lo que mantiene su temperatura en 36°C durante todo el año.</p>
+          <p style="margin-bottom:1rem">El recorrido del río transcurre entre paredes de roca caliza de hasta 800 metros de altura. En varios tramos el río se hace subterráneo al pasar por cuevas y túneles naturales, creando una experiencia de natación única donde el visitante alterna entre tramos al aire libre y secciones dentro de grutas iluminadas.</p>
+          <p>La profundidad del río varía entre 50 cm y 1.5 metros según el tramo. Es navegable a pie en su totalidad aunque se recomienda calzado acuático con agarre.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🌊 Temperatura estable</p><p style="font-size:.9rem;color:#4A5568;margin:0">36°C todo el año. En invierno la diferencia con el aire frío del cañón crea una niebla termal sobre la superficie.</p></div>
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🕳️ Tramos subterráneos</p><p style="font-size:.9rem;color:#4A5568;margin:0">En varios puntos el río atraviesa cuevas y túneles. Llevar linterna es muy recomendable.</p></div>
+          <div style="background:white;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)"><p style="font-weight:800;color:#1A3A6B;margin-bottom:.5rem">🐟 Ecosistema acuático</p><p style="font-size:.9rem;color:#4A5568;margin:0">El río alberga pequeños peces termófilos adaptados a las condiciones geotérmicas. Fauna única en el mundo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--blue bg-blue" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;opacity:.18;pointer-events:none;color:#FEC700"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div style="position:absolute;bottom:0;left:-20px;opacity:.12;pointer-events:none;color:#FEC700;transform:rotate(180deg)"><svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/></svg></div>
+    <div class="container">
+      <div class="section__header" style="margin-bottom:2.5rem"><h2 style="color:#FEC700">Lo que necesitas para el río</h2></div>
+      <div class="service-cards"><div class="service-card"><div style="font-size:2.5rem">👟</div><p class="service-card__title">Zapatos acuáticos</p><p class="service-card__desc">Indispensable. El lecho del río tiene piedras irregulares y algunas zonas resbaladizas.</p><a href="/blog/que-llevar-a-tolantongo/" class="service-card__cta">Ver lista completa →</a></div><div class="service-card"><div style="font-size:2.5rem">🔦</div><p class="service-card__title">Linterna</p><p class="service-card__desc">Para los tramos subterráneos. Puede ser una linterna de mano o frontal. Waterproof recomendable.</p></div><div class="service-card"><div style="font-size:2.5rem">📷</div><p class="service-card__title">Cámara waterproof</p><p class="service-card__desc">El río es uno de los escenarios más fotogénicos. Una funda impermeable para tu celular es suficiente.</p></div><div class="service-card"><div style="font-size:2.5rem">🎟️</div><p class="service-card__title">Incluido en la entrada</p><p class="service-card__desc">El acceso al río está incluido en el precio de entrada general. Sin costo adicional.</p><a href="/precios/" class="btn">Ver precios</a></div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Galería fotográfica</h2>
+        <p>Descubre la belleza del río termal en Tolantongo</p>
+      </div>
+      <div class="photo-gallery animate-on-scroll delay-1">
+        <div class="photo-gallery__item photo-gallery__item--wide">
+          <img src="/media/grutas-tolantongo-rio-turquesa-atardecer.webp" alt="Río turquesa de Tolantongo al atardecer con luz dorada" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-balneario-natural-2.webp" alt="Balneario natural en el río turquesa de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-rio-turquesa-ribera-natural.webp" alt="Ribera natural del río turquesa de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-cascada-rio-turquesa-canon.webp" alt="Cascada del río turquesa dentro del cañón de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+        <div class="photo-gallery__item">
+          <img src="/media/grutas-tolantongo-poza-termal-mujer-relax-rojo.webp" alt="Mujer relajándose en poza termal junto al río de Tolantongo" width="600" height="450" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  <VideoGallery videoIds={['rio-turquesa-cascada','rio-turquesa-rocas']} lang="es" title="Videos del río termal" columns={2} />
+
+  <section class="section" aria-labelledby="faq-t">
+    <div class="container">
+      <div class="section__header"><h2 id="faq-t">Preguntas sobre el río</h2></div>
+      <div class="faq-list"><details><summary>¿Se puede nadar en el río Tolantongo?</summary><div class="faq-answer">Sí, el río es navegable y nadable en todo su recorrido. La profundidad varía pero la mayoría del trayecto permite caminar o nadar cómodamente.</div></details><details><summary>¿Hay corriente peligrosa en el río?</summary><div class="faq-answer">La corriente es suave en la mayoría del recorrido. En temporada de lluvias puede aumentar. Siempre respetar las señalizaciones del destino sobre zonas habilitadas.</div></details><details><summary>¿El acceso al río está incluido en la entrada?</summary><div class="faq-answer">Sí. El recorrido por el río forma parte del acceso general al destino. No hay costo adicional.</div></details></div>
+    </div>
+  </section>
+</BaseLayout>

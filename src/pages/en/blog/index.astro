@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = (await getCollection('blog'))
+  .filter(p => p.data.lang === 'en')
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const silos = [
+  { id: 'all', label: 'All', icon: '\u{1F4DA}', href: '/en/blog/' },
+  { id: 'guias-viaje', label: 'Travel Guides', icon: '\u{1F4CB}', href: '/en/blog/travel-guides/' },
+  { id: 'grutas-termales', label: 'Thermal Grottoes', icon: '\u{1F30A}', href: '/en/blog/thermal-grottoes/' },
+  { id: 'actividades-aventura', label: 'Activities', icon: '\u{1F97E}', href: '/en/blog/adventure-activities/' },
+  { id: 'hospedaje-camping', label: 'Lodging', icon: '\u{1F3D5}\uFE0F', href: '/en/blog/lodging-camping/' },
+  { id: 'cultura-region', label: 'Culture', icon: '\u{1F3DB}\uFE0F', href: '/en/blog/culture-region/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Grutas de Tolantongo Blog',
+  description: 'Travel guides, practical tips, and everything you need to know to visit Grutas de Tolantongo.',
+  url: 'https://tolantongo.com.mx/en/blog/',
+};
+
+const breadcrumbs = [
+  { label: 'Blog' },
+];
+---
+
+<BaseLayout title="Grutas de Tolantongo Blog — Travel Guides & Tips 2026" description="Travel guides, practical tips, and everything you need to know to visit Grutas de Tolantongo in 2026. Prices, what to bring, how to get there and more." canonical="/en/blog/" schema={schema} breadcrumbs={breadcrumbs} lang="en">
+  <Header slot="header" lang="en" />
+  <Footer slot="footer" lang="en" />
+
+  <section class="hero">
+    <div style="position:absolute;top:0;right:0;opacity:.25;pointer-events:none;color:#1A3A6B">
+      <svg viewBox="0 0 168 176" width="180" height="188" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M167.701 117.179C161.987 83.6731 119.483 70.9796 119.483 70.9796C119.483 70.9796 147.681 65.0139 148.945 39.3199C149.095 36.2593 147.409 33.3998 144.629 32.1104C120.769 21.0441 107.081 36.8409 107.081 36.8409C107.081 36.8409 115.377 14.4881 104.488 2.44813C102.708 0.480145 99.9804-0.3702 97.3723 0.149701C76.5705 4.29422 66.716 30.5874 66.716 30.5874C66.716 30.5874 54.6599 13.6554 33.9347 18.5254C31.5355 19.0894 29.5343 20.7504 28.5575 23.0092C23.3852 34.9977 28.8677 47.2066 40.1003 57.7162C41.4618 58.991 43.2408 60.445 44.7466 61.6316C46.013 62.6289 45.6281 64.635 44.078 65.0962C42.1731 65.6631 39.8736 66.3475 38.0128 66.9026C26.0282 70.4773 7.31171 79.0733 0.480605 98.4256C-0.148067 100.206 0.102731 102.179 1.19889 103.713C13.4092 120.793 40.9705 122.642 63.952 101.005C63.952 101.005 33.7208 154.096 81.7728 174.647C83.8736 175.546 86.2793 175.46 88.3029 174.396C125.518 154.813 105.439 108.345 105.439 108.345C105.439 108.345 130.307 140.147 163.367 125.421C166.538 124.008 168.282 120.592 167.7 117.177L167.701 117.179Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Guides & tips for visitors</span>
+        <h1 class="hero__title">Grutas de Tolantongo Blog</h1>
+        <p class="hero__desc">Practical guides, travel tips, and everything you need to know to plan your perfect visit to Grutas de Tolantongo.</p>
+        <div class="hero__actions">
+          <a href="/en/blog/travel-guides/" class="btn btn--primary btn--lg">Travel Guides</a>
+          <a href="/en/prices/" class="btn btn--outline btn--lg">See Prices</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__photo-frame">
+          <div class="hero__deco hero__deco--tr"></div>
+          <div class="hero__deco hero__deco--bl"></div>
+          <img src="/media/grutas-tolantongo-cascada-aerea-selva.webp" alt="Natural landscape at Grutas de Tolantongo" width="600" height="400" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Silo Navigation -->
+  <section class="section" style="padding-top:2rem;padding-bottom:0">
+    <div class="container">
+      <nav class="blog-silo-nav" aria-label="Filter by topic">
+        {silos.map(silo => (
+          <a
+            href={silo.href}
+            class={`blog-silo-nav__item ${silo.id === 'all' ? 'blog-silo-nav__item--active' : ''}`}
+          >
+            <span aria-hidden="true">{silo.icon}</span> {silo.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <!-- All Posts -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>All Articles</h2>
+        <p>{allPosts.length} {allPosts.length === 1 ? 'article published' : 'articles published'}</p>
+      </div>
+      {allPosts.length > 0 ? (
+        <div class="card-grid card-grid--3 animate-on-scroll delay-1">
+          {allPosts.map(post => (
+            <BlogCard
+              title={post.data.title}
+              description={post.data.description}
+              slug={post.slug.replace(/^en-/, '')}
+              image={post.data.image}
+              imageAlt={post.data.imageAlt}
+              author={post.data.author}
+              publishDate={post.data.publishDate}
+              readingTime={post.data.readingTime}
+              category={post.data.category}
+              lang="en"
+            />
+          ))}
+        </div>
+      ) : (
+        <p style="text-align:center;color:var(--mc-text-muted);padding:3rem 0">New articles coming soon. Stay tuned!</p>
+      )}
+    </div>
+  </section>
+
+  <!-- Explore Silos -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header animate-on-scroll">
+        <h2>Explore by Topic</h2>
+        <p>Find exactly what you need for your visit to Tolantongo.</p>
+      </div>
+      <div class="card-grid card-grid--3 animate-on-scroll delay-1">
+        <a href="/en/blog/travel-guides/" class="service-card">
+          <div class="service-card__icon">{'\u{1F4CB}'}</div>
+          <h3 class="service-card__title">Travel Guides</h3>
+          <p class="service-card__desc">What to bring, how to get there, prices, best time to visit, and practical tips.</p>
+        </a>
+        <a href="/en/blog/thermal-grottoes/" class="service-card">
+          <div class="service-card__icon">{'\u{1F30A}'}</div>
+          <h3 class="service-card__title">Thermal Grottoes</h3>
+          <p class="service-card__desc">Geology, temperatures, terraced pools, and natural formations.</p>
+        </a>
+        <a href="/en/blog/adventure-activities/" class="service-card">
+          <div class="service-card__icon">{'\u{1F97E}'}</div>
+          <h3 class="service-card__title">Activities & Adventure</h3>
+          <p class="service-card__desc">Hiking, rappelling, thermal swimming, and photography.</p>
+        </a>
+        <a href="/en/blog/lodging-camping/" class="service-card">
+          <div class="service-card__icon">{'\u{1F3D5}\uFE0F'}</div>
+          <h3 class="service-card__title">Lodging & Camping</h3>
+          <p class="service-card__desc">Cabins, campsite, how to book, and accommodation comparisons.</p>
+        </a>
+        <a href="/en/blog/culture-region/" class="service-card">
+          <div class="service-card__icon">{'\u{1F3DB}\uFE0F'}</div>
+          <h3 class="service-card__title">Culture & Region</h3>
+          <p class="service-card__desc">History, Hnahnu culture, gastronomy, and Cardonal.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

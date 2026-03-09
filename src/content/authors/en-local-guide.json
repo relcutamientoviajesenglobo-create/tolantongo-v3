@@ -1,0 +1,16 @@
+{
+  "name": "Carlos Martinez",
+  "role": "Certified Local Guide",
+  "bio": "Adventure tourism guide certified by SECTUR, born and raised in the municipality of Cardonal, Hidalgo. With over 8 years leading excursions through the Tolantongo Canyon, hiking trails of the Sierra Gorda, and the Hn\u00e4hn\u00fc communities in the region. Specialist in rappelling, grotto exploration, and sustainable tourism. He has walked every trail, explored every grotto, and knows the water temperature of every pool in every season of the year.",
+  "avatar": "/media/authors/guia-local.jpg",
+  "expertise": [
+    "Hiking and mountain trails",
+    "Rappelling and adventure tourism",
+    "Grotto and cave exploration",
+    "Sierra Gorda flora and fauna",
+    "Hn\u00e4hn\u00fc culture and history"
+  ],
+  "social": {
+    "instagram": "https://instagram.com/grutasdetolantongomx"
+  }
+}

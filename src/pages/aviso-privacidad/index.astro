@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { webPage } from '../../i18n/schema';
+
+const schema = [
+  webPage({
+    name: 'Aviso de Privacidad — Grutas de Tolantongo',
+    url: 'https://tolantongo.com.mx/aviso-privacidad/',
+    description: 'Aviso de privacidad y protección de datos de Grutas de Tolantongo.',
+  }),
+];
+---
+
+<BaseLayout title="Aviso de Privacidad — Grutas de Tolantongo" description="Aviso de privacidad de Grutas de Tolantongo. Tratamiento de datos personales, derechos ARCO y responsable del tratamiento. Ejido El Alberto, Cardonal, Hidalgo." canonical="/aviso-privacidad/" schema={schema}>
+  <Header slot="header" />
+  <Footer slot="footer" />
+<div class="breadcrumbs"><div class="container"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">🏠 Inicio</a></li><li class="breadcrumbs__item"><span class="breadcrumbs__sep">›</span><span class="breadcrumbs__current">Aviso de Privacidad</span></li></ol></div></div>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="chip chip--blue">Documento legal</span>
+        <h1 class="hero__title">Aviso de Privacidad</h1>
+        <p class="hero__desc">Grutas de Tolantongo — Ejido El Alberto, Cardonal, Hidalgo</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container" style="max-width:800px">
+      <div style="background:white;border-radius:20px;padding:2.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:1.5rem">
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">1. Responsable del tratamiento de datos</h2><p style="font-size:.925rem;color:#4A5568">El Ejido El Alberto (Grutas de Tolantongo), con domicilio en Comunidad El Alberto s/n, Cardonal, Hidalgo, C.P. 42400, México, es responsable del uso y protección de sus datos personales.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">2. Datos personales que recabamos</h2><p style="font-size:.925rem;color:#4A5568">Para finalidades de reservas y atención al visitante podemos recabar: nombre completo, número de teléfono, correo electrónico y número de visitantes. No recabamos datos financieros ya que todos los pagos son en efectivo.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">3. Finalidades del tratamiento</h2><p style="font-size:.925rem;color:#4A5568">Sus datos son utilizados para: confirmar reservas de hospedaje, brindar información sobre el destino y enviar comunicaciones relacionadas con su visita. No comercializamos ni cedemos sus datos a terceros sin su consentimiento.</p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">4. Derechos ARCO</h2><p style="font-size:.925rem;color:#4A5568">Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de sus datos personales (Derechos ARCO). Para ejercerlos puede contactarnos a: <a href="mailto:info@grutasdetolantongo.mx" style="color:#1951A0;font-weight:600">info@grutasdetolantongo.mx</a></p></div>
+        <div><h2 style="font-size:1.15rem;margin-bottom:.75rem">5. Cambios al aviso de privacidad</h2><p style="font-size:.925rem;color:#4A5568">Cualquier modificación a este aviso de privacidad será publicada en este sitio web. Última actualización: enero 2026.</p></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
