@@ -39,9 +39,10 @@ const authors = defineCollection({
     expertise: z.array(z.string()),
     social: z
       .object({
-        twitter: z.string().optional(),
-        linkedin: z.string().optional(),
         instagram: z.string().optional(),
+        facebook: z.string().optional(),
+        tiktok: z.string().optional(),
+        pinterest: z.string().optional(),
       })
       .optional(),
   }),
